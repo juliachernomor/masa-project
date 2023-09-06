@@ -11,30 +11,78 @@
   <link rel="manifest" href="manifest.webmanifest">
   <title>Маса</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" as="style" href="fonts/montserrat-bold.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/montserrat-extrabold.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="style" href="fonts/montserrat-light.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/montserrat-medium.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/montserrat-regular.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/montserrat-semibold.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="fonts/manrope-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="fonts/manrope-medium.woff2" type="font/woff2" crossorigin>
+
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class = "wrapper__main-header main-header">
+        <div class="container">
+          <div class="main-header__header header">
+            <a href="#"><span class="visually-hidden">Логотип образовательного центра</span>
+          <svg width="52" height="52" viewBox="0 0 52 52">
+            <use href="./img/sprite.svg#logotype"></use>
+          </svg>
+        </a>
+        <nav class="nav nav--closed">
+          <p>Меню</p>
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открывает и закрывает меню</span>
+          </button>
+            <ul class = "nav__list">
+              <li class="nav__item">
+                <a href="#">O проекте</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Программы</a>
+                <div class="nav__dropdown-wrapper">
+                  <ul class ="nav__dropdown-list">
+                    <li class="nav__dropdown-item">
+                      <a href="#">Стажировки</a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                      <a href="#">Волонтерство</a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                      <a href="#">Учеба</a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                      <a href="#">Религия</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__item">
+                <a href="#">Как поехать</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+        </nav>
+
+          </div>
+          <div class="main-header__hero hero">
+
+          </div>
+        </div>
+
       </header>
-      <main>
+      <main class= "wrapper__main main">
         <section class="intro">
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
         </section>
       </main>
-      <footer>
+      <footer class= "wrapper__footer footer">
         <div class="container"></div>
       </footer>
     </div>
