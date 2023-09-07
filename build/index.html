@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Образование за рубежом">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple.png" type="image/png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png" type="image/png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <title>Маса</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" as="style" href="fonts/montserrat-light.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/manrope-regular.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="style" href="fonts/manrope-medium.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" as="style" href="./fonts/montserrat-light.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="./fonts/manrope-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="./fonts/manrope-medium.woff2" type="font/woff2" crossorigin>
 
   </head>
   <body>
@@ -26,11 +26,11 @@
             <use href="./img/sprite.svg#logotype"></use>
           </svg>
         </a>
-        <nav class="nav nav--closed">
-          <p>Меню</p>
           <button class="nav__toggle" type="button">
+            Меню
             <span class="visually-hidden">Открывает и закрывает меню</span>
           </button>
+          <nav class="nav nav--closed">
             <ul class = "nav__list">
               <li class="nav__item">
                 <a href="#">O проекте</a>
@@ -68,12 +68,52 @@
               </li>
             </ul>
         </nav>
+          </div>
+
+          <div class="main-header__hero hero ">
+
+            <div class="hero__swiperswiper swiper--1">
+            <div class="hero__container swiper-wrapper">
+              <div class="hero__slider hero-slider swiper-slide">
+                <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                <div class="hero-slider__wrapper">
+                  <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                  <a href="#">Подробнее
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use href="./img/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero__slider hero-slider swiper-slide">
+                <h2>Волонтёрские программы&nbsp;&mdash; внесите свой вклад в&nbsp;общество</h2>
+                <div class="hero-slider__wrapper">
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+                  <a href="#">Подробнее
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use href="./img/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero__slider hero-slider swiper-slide">
+                <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                <div class="hero-slider__wrapper">
+                  <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+                  <a href="#">Подробнее
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use href="./img/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
 
           </div>
-          <div class="main-header__hero hero">
-
-          </div>
+          <div class="hero__pagination swiper-pagination"></div>
         </div>
+      </div>
 
       </header>
       <main class= "wrapper__main main">
