@@ -1,3 +1,11 @@
+.nav--opened {
+  @include vp-767 {
+    min-width: 290px;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
 .nav__btn {
   min-width: 134px;
 }
@@ -28,12 +36,18 @@
   display: none;
 }
 
-.nav--opened button {
+.nav--opened .nav__btn {
   position: relative;
   width: 286px;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   z-index: 555;
+
+  @include vp-767 {
+    min-width: 290px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .nav--opened span:nth-child(2n) {
@@ -54,16 +68,30 @@
   position: absolute;
   content: "";
   width: 286px;
-  top: 100%;
+  top: 105%;
   margin: 0;
   padding: 30px 25px 12px 25px;
   list-style-type: none;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
+
+  @include vp-767 {
+    min-width: 290px;
+    width: 90%;
+    padding: 30px 25px 13px 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .nav__item {
   margin-bottom: 18px;
+}
+
+.nav__item button {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
 }
 
 .nav__item a {
@@ -100,6 +128,10 @@
   border: none;
   user-select: none;
   cursor: pointer;
+
+  // @include vp-767 {
+  //   width: 0;
+  // }
 }
 
 .nav__item--button-open  button {
