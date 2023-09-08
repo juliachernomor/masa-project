@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,149 +14,228 @@
   <link rel="preload" as="style" href="./fonts/montserrat-light.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="style" href="./fonts/manrope-regular.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="style" href="./fonts/manrope-medium.woff2" type="font/woff2" crossorigin>
+</head>
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class = "wrapper__main-header main-header">
-        <div class="container">
-          <div class="main-header__header header">
-            <a href="#"><span class="visually-hidden">Логотип образовательного центра</span>
+<body>
+  <div class="wrapper">
+    <header id ="header" class="wrapper__header header">
+      <div class="header__container container">
+
+        <a class ="header__logotype" href="#"><span class="visually-hidden">Логотип образовательного центра</span>
           <svg width="52" height="52" viewBox="0 0 52 52">
             <use href="./img/sprite.svg#logotype"></use>
           </svg>
         </a>
-          <button class="nav__toggle" type="button">
-            Меню
+
+        <nav class="nav nav--closed nav--nojs">
+          <button class="nav__btn btn" type="button">
+            <span>Меню</span>
+            <span></span>
             <span class="visually-hidden">Открывает и закрывает меню</span>
           </button>
-          <nav class="nav nav--closed">
-            <ul class = "nav__list">
-              <li class="nav__item">
-                <a href="#">O проекте</a>
-              </li>
-              <li class="nav__item">
-                <a href="#">Программы</a>
-                <div class="nav__dropdown-wrapper">
-                  <ul class ="nav__dropdown-list">
-                    <li class="nav__dropdown-item">
-                      <a href="#">Стажировки</a>
-                    </li>
-                    <li class="nav__dropdown-item">
-                      <a href="#">Волонтерство</a>
-                    </li>
-                    <li class="nav__dropdown-item">
-                      <a href="#">Учеба</a>
-                    </li>
-                    <li class="nav__dropdown-item">
-                      <a href="#">Религия</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav__item">
-                <a href="#">Как поехать</a>
-              </li>
-              <li class="nav__item">
-                <a href="#">Отзывы</a>
-              </li>
-              <li class="nav__item">
-                <a href="#">Новости</a>
-              </li>
-              <li class="nav__item">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#">O проекте</a>
+            </li>
+            <li class="nav__item nav__item--programms nav__item--button nav__item--button-close nav--nojs">
+              <button class="nav__item-programs-button" href="#">
+                <span>Программы</span>
+              </button>
+                <ul class="nav__dropdown-programs-list">
+                  <li class="nav__dropdown-item">
+                    <a href="#">Стажировки</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Волонтерство</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Учеба</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Религия</a>
+                  </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+              <a href="#">Как поехать</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Отзывы</a>
+            </li>
+
+            <li class="nav__item nav__item--news nav__item--button nav__item--button-close nav--nojs">
+              <button class="nav__item-news-button" href="#">
+                <span>Новости</span>
+              </button>
+                <ul class="nav__dropdown-news-list">
+                  <li class="nav__dropdown-item">
+                    <a href="#">100 лет со дня основания</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Выборы главы правления</a>
+                  </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
         </nav>
-          </div>
+      </div>
+    </header>
+    <main class="wrapper__main main">
+      <section class="main__hero hero">
+        <h1 class="visually-hidden">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</h1>
+        <div class="hero__swiper swiper swiper--1">
+          <ul class="hero__container swiper-wrapper">
+            <li class="hero__slider hero-slider swiper-slide" tabindex="0">
+              <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="./img/hero-background-mobile-1.webp, ./img/hero-background-mobile-1@2x.webp 2x" width="320"height="568">
+              <source type="image/jpg" media="(max-width: 767px)"
+                srcset="./img/hero-background-mobile-1.jpg, ./img/hero-background-mobile-1@2x.jpg 2x" width="320" height="568">
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="./img/hero-background-tablet-1.webp, ./img/hero-background-tablet-1@2x.webp 2x" width="768"
+                height="1024">
+              <source type="image/jpg" media="(max-width: 1199px)" srcset="./img/hero-background-tablet-1.jpg, ./img/hero-background-tablet-1@2x.jpg 2x" width="768" height="1024">
+              <source type="image/webp" srcset="./img/hero-background-desktop-1.webp, img/hero-background-desktop-1@2x.webp 2x" width="1440"
+                height="800">
+              <img src="./img/hero-background-desktop-1.jpg"
+                srcset="img/hero-background-desktop-1@2x.jpg 2x" width="1440" height="800" loading="lazy"
+                alt="Декоративное изображение слайда.">
+            </picture>
 
-          <div class="main-header__hero hero ">
-
-            <div class="hero__swiperswiper swiper--1">
-            <div class="hero__container swiper-wrapper">
-              <div class="hero__slider hero-slider swiper-slide">
+              <div class="hero-slider__wrapper">
+                <div class="hero-slider__pagination-wrapper">
+                <div class="hero-slider__pagination swiper-pagination"></div>
+              </div>
+                <div class="hero-slider__title-wrapper">
                 <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
-                <div class="hero-slider__wrapper">
-                  <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
-                  <a href="#">Подробнее
-                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                      <use href="./img/sprite.svg#arrow"></use>
-                    </svg>
+              </div>
+                <div class="hero-slider__inner-wrapper">
+                  <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
+                  организациях.</p>
+                  <a class="hero-slider__btn btn" href="#">
+                    <span>Подробнее</span>
+                    <span></span>
                   </a>
                 </div>
               </div>
+            </li>
+            <li class="hero__slider hero-slider swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/hero-background-mobile-2.webp, ./img/hero-background-mobile-2@2x.webp 2x" width="320"height="568">
+                <source type="image/jpg" media="(max-width: 767px)"
+                  srcset="./img/hero-background-mobile-2.jpg, ./img/hero-background-mobile-2@2x.jpg 2x" width="320" height="568">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/hero-background-tablet-2.webp, ./img/hero-background-tablet-2@2x.webp 2x" width="768"
+                  height="1024">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="./img/hero-background-tablet-2.jpg, ./img/hero-background-tablet-2@2x.jpg 2x" width="768" height="1024">
+                <source type="image/webp" srcset="./img/hero-background-desktop-2.webp, img/hero-background-desktop-2@2x.webp 2x" width="1440" height="800">
+                <img src="./img/hero-background-desktop-2.jpg"
+                  srcset="img/hero-background-desktop-2@2x.jpg 2x" width="1440" height="800" loading="lazy"
+                  alt="Декоративное изображение слайда.">
+              </picture>
 
-              <div class="hero__slider hero-slider swiper-slide">
+              <div class="hero-slider__wrapper">
+                <div class="hero-slider__pagination-wrapper">
+                <div class="hero-slider__pagination swiper-pagination"></div>
+              </div>
+                <div class="hero-slider__title-wrapper">
                 <h2>Волонтёрские программы&nbsp;&mdash; внесите свой вклад в&nbsp;общество</h2>
-                <div class="hero-slider__wrapper">
-                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
-                  <a href="#">Подробнее
-                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                      <use href="./img/sprite.svg#arrow"></use>
-                    </svg>
+              </div>
+                <div class="hero-slider__inner-wrapper">
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
+                  и&nbsp;другое.</p>
+                  <a class="hero-slider__btn btn" href="#">
+                    <span>Подробнее</span>
+                    <span></span>
                   </a>
                 </div>
               </div>
-
-              <div class="hero__slider hero-slider swiper-slide">
+            </li>
+            <li class="hero__slider hero-slider swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/hero-background-mobile-3.webp, ./img/hero-background-mobile-3@2x.webp 2x" width="320"height="568">
+                <source type="image/jpg" media="(max-width: 767px)"
+                  srcset="./img/hero-background-mobile-3.jpg, ./img/hero-background-mobile-3@2x.jpg 2x" width="320" height="568">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/hero-background-tablet-3.webp, ./img/hero-background-tablet-3@2x.webp 2x" width="768"
+                  height="1024">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="./img/hero-background-tablet-3.jpg, ./img/hero-background-tablet-3@2x.jpg 2x" width="768" height="1024">
+                <source type="image/webp" srcset="./img/hero-background-desktop-3.webp, img/hero-background-desktop-3@2x.webp 2x" width="1440" height="800">
+                <img src="./img/hero-background-desktop-3.jpg"
+                  srcset="img/hero-background-desktop-3@2x.jpg 2x" width="1440" height="800" loading="lazy"
+                  alt="Декоративное изображение слайда.">
+              </picture>
+              <div class="hero-slider__wrapper">
+                <div class="hero-slider__pagination-wrapper">
+                <div class="hero-slider__pagination swiper-pagination"></div>
+              </div>
+                <div class="hero-slider__title-wrapper">
                 <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
-                <div class="hero-slider__wrapper">
-                  <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
-                  <a href="#">Подробнее
-                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                      <use href="./img/sprite.svg#arrow"></use>
-                    </svg>
+                </div>
+                <div class="hero-slider__inner-wrapper">
+                  <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
+                  настоящий израильский стиль жизни!</p>
+                  <a class="hero-slider__btn btn" href="#">
+                    <span>Подробнее</span>
+                    <span></span>
                   </a>
                 </div>
               </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+
+
 
           </div>
-          <div class="hero__pagination swiper-pagination"></div>
         </div>
-      </div>
 
-      </header>
-      <main class= "wrapper__main main">
-        <section class="intro">
-          <div class="container">
-          </div>
-        </section>
-      </main>
-      <footer class= "wrapper__footer footer">
-        <div class="container"></div>
-      </footer>
-    </div>
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
+    <footer class="wrapper__footer footer">
+      <div class="container"></div>
+    </footer>
+  </div>
+
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Обычная модалка</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

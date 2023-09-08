@@ -1,34 +1,36 @@
-// swiper.on('transitionStart', function (e) {
-//   const header = document.querySelector('header');
+import swiper from '../vendor/swiper';
 
-//   if (e.activeIndex === 0) {
-//     if (window.innerWidth >= 768 && window.innerWidth < 1200) {
-//       header.style.backgroundImage = 'url("img/hero/caucasus-tablet@2x.webp")';
-//     } else if (window.innerWidth < 768) {
-//       header.style.backgroundImage = 'url("img/hero/caucasus-mobile@2x.webp")';
-//     } else {
-//       header.style.backgroundImage = 'url("img/hero/caucasus-desktop@2x.webp")';
-//     }
-//   }
-//   if (e.activeIndex === 1) {
-//     if (window.innerWidth >= 768 && window.innerWidth < 1200) {
-//       header.style.backgroundImage = 'url("img/hero/kamchatka-tablet@2x.webp")';
-//     } else if (window.innerWidth < 768) {
-//       header.style.backgroundImage = 'url("img/hero/kamchatka-mobile@2x.webp")';
-//     } else {
-//       header.style.backgroundImage = 'url("img/hero/kamchatka-desktop@2x.webp")';
-//     }
-//   }
-//   if (e.activeIndex === 2) {
-//     if (window.innerWidth >= 768 && window.innerWidth < 1200) {
-//       header.style.backgroundImage = 'url("img/hero/altai-tablet@2x.webp")';
-//     } else if (window.innerWidth < 768) {
-//       header.style.backgroundImage = 'url("img/hero/altai-mobile@2x.webp")';
-//     } else {
-//       header.style.backgroundImage = 'url("img/hero/altai-desktop@2x.webp")';
-//     }
-//   }
-//   header.style.backgroundSize = 'cover';
-// });
-// }
-// };
+const elementHero = document.querySelector('.swiper--1');
+const createHeroSlider = () => {
+  if (elementHero) {
+    /* eslint-disable */
+    new swiper('.swiper--1', {
+    /* eslint-enable */
+      speed: 1500,
+      loop: true,
+      effect: 'fade',
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+        },
+        768: {
+          allowTouchMove: true,
+        },
+        1200: {
+          allowTouchMove: false,
+        },
+      },
+      pagination: {
+        el: '.hero-slider__pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
+  }
+};
+
+export {createHeroSlider};

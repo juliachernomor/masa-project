@@ -1,6 +1,5 @@
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,13 +16,13 @@
   }
 }
 
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
+// .rouble {
+//   font-family: $ff-rouble;
+//   /* stylelint-disable */
+//   text-transform: lowercase !important;
+//   font-weight: 400 !important;
+//   /* stylelint-enable */
+// }
 
 .visually-hidden {
   position: absolute;
@@ -44,8 +43,22 @@
 }
 
 .scroll-lock {
+  position: relative;
   overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black-pearl;
+    opacity: 0.4;
+    z-index: 3;
+  }
 }
+
 
 .no-scrollbar {
   -ms-overflow-style: none;

@@ -1,0 +1,152 @@
+.nav__btn {
+  min-width: 134px;
+}
+
+.nav__btn span:nth-child(2n) {
+  position: relative;
+  flex-grow: 0;
+  display: block;
+  height: 46px;
+  width: 46px;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  margin: 0;
+
+  &::after {
+    position: absolute;
+    content: url("../img/sprite/menu.svg");
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 18px;
+    height: 8px;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav--opened button {
+  position: relative;
+  width: 286px;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  z-index: 555;
+}
+
+.nav--opened span:nth-child(2n) {
+  background-color: $color-default-white;
+
+  &::after {
+    content: url("../img/sprite/cross.svg");
+    top: 12px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.nav--opened .nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  content: "";
+  width: 286px;
+  top: 100%;
+  margin: 0;
+  padding: 30px 25px 12px 25px;
+  list-style-type: none;
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+}
+
+.nav__item {
+  margin-bottom: 18px;
+}
+
+.nav__item a {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: $color-default-white;
+}
+
+.nav__dropdown-item  {
+  margin: 0 0 4px 0;
+
+}
+.nav__dropdown-item a {
+  text-transform: none;
+}
+
+.nav__item button {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nav__item--button-open  button {
+  margin-bottom: 13px;
+}
+
+.nav__item-programs-button span,
+.nav__item-news-button span {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content:  "";
+    background-image: url("../img/sprite/arrow-down.svg");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: calc(100% + 10px);
+  }
+}
+
+.nav__dropdown-programs-list,
+.nav__dropdown-news-list {
+  padding: 0;
+  margin-left: 15px;
+  list-style-type: none;
+}
+
+.nav__item--button {
+  margin-bottom: 18px;
+}
+
+.nav__item--button-open {
+  margin-bottom: 12px;
+}
+
+.nav__dropdown-programs-list,
+.nav__dropdown-news-list {
+  display: none;
+}
+
+.nav__item--button-open span::after{
+  transform: rotate(180deg);
+}
+
+.nav__item--button-open .nav__dropdown-programs-list,
+.nav__item--button-open .nav__dropdown-news-list {
+  display: block;
+}

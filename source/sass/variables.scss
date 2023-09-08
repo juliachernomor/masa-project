@@ -14,6 +14,8 @@ $color-cerulean-blue:               #316dc2;
 $color-endeavour:                   #275699;
 $color-mischka:                     #a9afb7;
 $color-wild-watermelon:             #ff5e66;
+$color-rodeo-dust:                  #bba591;
+$color-black-pearl:                 #0d1d33;
 $color-cerulean-blue-transparent:   rgba(49, 109, 194, 0.2);
 $color-black-pearl-transparent:   rgba(13, 29, 51, 0.4);
 
@@ -30,9 +32,8 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "Manrope", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -52,6 +53,7 @@ $vp-320:                            320px;
 $vp-375:                            375px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+$vp-1200:                           1200px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
