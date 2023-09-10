@@ -147,5 +147,7 @@
 }
 
 .programs-slider__wrapper span:nth-child(2n)::after {
-  top: 5px
+  @include vp-767 {
+  top: 9px;
+  }
 }
