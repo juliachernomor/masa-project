@@ -69,4 +69,49 @@ const createProgramsSlider = () => {
     });
   }
 };
-export {createHeroSlider, createProgramsSlider};
+
+const elementNews = document.querySelector('.swiper--3');
+const createNewsSlider = () => {
+  if (elementNews) {
+    /* eslint-disable */
+    new swiper('.swiper--3', {
+      /* eslint-enable */
+      speed: 1500,
+      loop: false,
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1,
+        //   allowTouchMove: true,
+        // },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          grid: {
+            rows: 2,
+          },
+          allowTouchMove: true,
+        },
+        1200: {
+          slidesPerView: 'auto',
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
+      },
+      pagination: {
+        el: '.news__pagination',
+        clickable: true,
+        /* eslint-disable */
+        renderBullet:
+          function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+      },
+      /* eslint-enable */
+      navigation: {
+        nextEl: '.news__button-next',
+        prevEl: '.news__button-prev',
+      },
+    });
+  }
+};
+export {createHeroSlider, createProgramsSlider, createNewsSlider};

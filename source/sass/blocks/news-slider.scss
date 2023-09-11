@@ -1,0 +1,209 @@
+.news-slider {
+  position: relative;
+  border-radius: 12px;
+  height: auto;
+  width: 24.4%;
+  max-width: 286px;
+  overflow: hidden;
+
+  @media (max-width: 1250px){
+    max-width: 242px;
+  }
+
+    &:first-child {
+      width: 48.8%;
+      max-width: 604px;
+
+      @media (max-width: 1250px){
+        max-width: 493px;
+      }
+    }
+}
+
+.news-slider img {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.news-slider__content {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+}
+
+.news-slider:first-child .news-slider__content  {
+  width: 69.3%;
+}
+
+.news-slider__content time {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  margin: 0;
+  padding: 8px 12px 10px 0;
+  border-radius: 0px 12px 0px 0px;
+  background-color: $color-default-white;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 18px;
+    height: 18px;
+    left: 99%;
+    bottom: 7px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: -16px;
+  }
+}
+
+.news-slider:first-child time {
+  position: relative;
+  padding: 7px 12px 12px 0;
+  width: 20%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 16px;
+    height: 16px;
+    left: 99%;
+    bottom: 10px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: -15px;
+  }
+}
+
+.news-slider__content h3 {
+  position: relative;
+  width: 75%;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  padding: 6px 12px 0 0;
+  border-radius: 0px 12px 0px 0px;
+  background-color: $color-default-white;
+
+  @media (min-width: 1200px) and (max-width: 1440px) {
+    font-size: calc(19px + (24 - 19) * ( (100vw - 1200px) / ( 1440 - 1200) ));
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width:18px;
+    height: 18px;
+    left: 99.6%;
+    bottom: 0;
+  }
+}
+
+.news-slider:first-child h3 {
+  position: relative;
+  padding: 6px 12px 6px 0;
+  margin-top: -1px;
+  padding: 15px 12px 6px 0;
+  width: 70%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 18px;
+    height: 18px;
+    left: 99.8%;
+    bottom: 2px;
+  }
+}
+
+.news-slider__content p {
+  position: relative;
+  width: 84%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: -1px 0 0 0;
+  border-radius: 0px 12px;
+  padding: 8px 18px 14px 0;
+  background-color: $color-default-white;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width:18px;
+    height: 18px;
+    left: 99.6%;
+    bottom: 0;
+  }
+}
+
+.news-slider:first-child p {
+  position: relative;
+  margin-top: -3px;
+  width: 93%;
+  padding: 8px 18px 13px 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/sprite/angle-top.svg);
+    width: 19px;
+    height: 19px;
+    left: 99.5%;
+    bottom: 0;
+  }
+}
+
+.news-slider__content span:nth-child(1n) {
+  width: 79%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 176px;
+
+  @media (min-width: 1200px) and (max-width: 1440px) {
+    font-size: calc(10px + (14 - 10) * ( (100vw - 1200px) / ( 1440 - 1200) ));
+  }
+}
+
+.news-slider__content--first span:nth-child(1n) {
+  width: 88%;
+  max-width: unset;
+
+  @media (min-width: 1200px) and (max-width: 1440px) {
+    font-size: calc(10px + (14 - 10) * ( (100vw - 1200px) / ( 1440 - 1200) ));
+  }
+}
+
+.news-slider__content span:nth-child(2n) {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+}
+
+.news-slider__content span:nth-child(2n)::after {
+  top: 7px;
+}
