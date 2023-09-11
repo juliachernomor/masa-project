@@ -7,7 +7,13 @@
 }
 
 .nav__btn {
-  min-width: 134px;
+  width: 134px;
+  max-width: 134px;
+}
+
+.nav__btn span:nth-child(1n) {
+  width: 44px;
+  max-width: 44px;
 }
 
 .nav__btn span:nth-child(2n) {

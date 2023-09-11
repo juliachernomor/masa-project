@@ -1,41 +1,45 @@
 .programs-slider {
   position: relative;
-  width: 100%;
-  // height: auto;
+  max-width: 392px;
+  height: auto;
   border-radius: 12px;
-  padding: 280px 20px 20px;
 
   @include vp-1199 {
-    padding: 286px 20px 20px;
-    // min-height: 420px;
-  }
-
-  @include vp-767 {
-    padding: 272px 10px 10px;
-    min-width: 290px;
-    // height: inherit;
-    min-height: 400px;
+    max-width: unset;
   }
 }
 
 .programs-slider img {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
   border-radius: 12px;
   object-fit: cover;
-  z-index: -1;
 
   @include vp-1199 {
-    object-position: top;
+    width: 100%;
+    height: 100%;
   }
 
   @include vp-1199 {
-    object-position: left top;
-    object-fit: cover;
+    min-height: 400px;
+    min-width: 290px;
+    object-position: 0 0;
+  }
+}
+
+.programs-slider__wrapper {
+  position: absolute;
+  content: "";
+  bottom: 20px;
+  left: 20px;
+  width: 90%;
+
+  @include vp-1199 {
+    width: 87.5%;
+    bottom: 19px;
+  }
+
+  @include vp-767 {
+    width: 93.1%;
+    left: 10px;
   }
 }
 
@@ -64,7 +68,6 @@
     height: 18px;
     left: 99%;
     bottom: 0;
-
   }
 
   @include vp-1199 {
@@ -147,6 +150,8 @@
 }
 
 .programs-slider__wrapper span:nth-child(2n)::after {
+  top: 5px;
+
   @include vp-767 {
   top: 9px;
   }

@@ -79,21 +79,30 @@ const createNewsSlider = () => {
       speed: 1500,
       loop: false,
       breakpoints: {
-        // 320: {
-        //   slidesPerView: 1,
-        //   allowTouchMove: true,
-        // },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
+          allowTouchMove: true,
+        },
         768: {
           slidesPerView: 2,
           spaceBetween: 30,
           grid: {
             rows: 2,
+            fill: 'row',
           },
           allowTouchMove: true,
         },
         1200: {
           slidesPerView: 'auto',
           spaceBetween: 32,
+          grid: {
+            rows: 1,
+          },
           allowTouchMove: false,
         },
       },
