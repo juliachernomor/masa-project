@@ -123,4 +123,41 @@ const createNewsSlider = () => {
     });
   }
 };
-export {createHeroSlider, createProgramsSlider, createNewsSlider};
+
+const elementReviews = document.querySelector('.swiper--4');
+const createReviewsSlider = () => {
+  if (elementReviews) {
+    /* eslint-disable */
+    new swiper('.swiper--4', {
+      /* eslint-enable */
+      speed: 1500,
+      loop: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 7.5,
+          allowTouchMove: true,
+        },
+        768: {
+          slidesPerView: 1.279,
+          spaceBetween: 30,
+          allowTouchMove: true,
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
+      },
+      scrollbar: {
+        el: '.reviews__scrollbar',
+      },
+      navigation: {
+        nextEl: '.reviews__button-next',
+        prevEl: '.reviews__button-prev',
+
+      },
+    });
+  }
+};
+export {createHeroSlider, createProgramsSlider, createNewsSlider, createReviewsSlider};

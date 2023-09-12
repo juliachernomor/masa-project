@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {createHeroSlider, createProgramsSlider, createNewsSlider} from './modules/sliders';
+import {createHeroSlider, createProgramsSlider, createNewsSlider, createReviewsSlider} from './modules/sliders';
 import {effectMenu} from './modules/menu';
 import {effectDropMenuNews, effectDropMenuProgramms} from './modules/dropmenu';
 import {initAccordions} from './vendor/init-accordion';
@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   createHeroSlider();
   createProgramsSlider();
   createNewsSlider();
+  createReviewsSlider();
   iosVhFix();
   effectMenu();
   effectDropMenuNews();

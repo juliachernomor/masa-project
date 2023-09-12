@@ -107,6 +107,7 @@
   content: "";
   bottom: 0;
   left: 0;
+  width: 100%;
 
   @include vp-1199 {
     width: 88.1%;
@@ -360,4 +361,13 @@
 
 .news-slider__content span:nth-child(2n)::after {
   top: 7px;
+}
+
+// .news-slider__content--br h3 br {
+//   @include vp-767 {
+//     display: none;
+//   }
+// }
+.news-slider__content-h3 {
+  width: 80%;
 }
