@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {createHeroSlider, createProgramsSlider, createNewsSlider} from './modules/sliders';
 import {effectMenu} from './modules/menu';
 import {effectDropMenuNews, effectDropMenuProgramms} from './modules/dropmenu';
+import {initAccordions} from './vendor/init-accordion';
 
 
 // ---------------------------------
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   effectMenu();
   effectDropMenuNews();
   effectDropMenuProgramms();
+  initAccordions();
 
   // Modules
   // ---------------------------------
