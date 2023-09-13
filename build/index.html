@@ -876,6 +876,46 @@
         </div>
       </section>
 
+      <section class="main__contacts contacts">
+        <div class="contacts__container container">
+          <h2>Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p>Центральный офис</p>
+              <a href="#">г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</a>
+          </li>
+          <li class="contacts__item">
+              <p>Телефон</p>
+              <a href="tel:+796387687676">+7 963 876 876 76</a>
+          </li>
+                <li class="contacts__item">
+                    <p>E-mail</p>
+                    <a href="mailto:Info@masa.ru">Info@masa.ru</a>
+                </li>
+              </ul>
+            <div class="contacts__map map">
+              <a class="map__static-map" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="290" height="240">
+                  <source type="image/png" media="(max-width: 767px)"
+                    srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x" width="290" height="240">
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="678" height="500">
+                  <source type="image/png" media="(max-width: 1199px)"
+                    srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="678" height="500">
+                  <source type="image/webp"
+                    srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1240" height="500">
+                  <img src="img/map-desktop.png" width="1240" height="500" srcset="img/map-desktop@2x.png" loading="lazy"
+                    alt="Мы на карте города.">
+                </picture>
+              </a>
+              <div class="map__interactive-map" id="map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
 

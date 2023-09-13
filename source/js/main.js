@@ -5,7 +5,7 @@ import {createHeroSlider, createProgramsSlider, createNewsSlider, createReviewsS
 import {effectMenu} from './modules/menu';
 import {effectDropMenuNews, effectDropMenuProgramms} from './modules/dropmenu';
 import {initAccordions} from './vendor/init-accordion';
-
+import {initmap} from './modules/map';
 
 // ---------------------------------
 
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   effectDropMenuNews();
   effectDropMenuProgramms();
   initAccordions();
+  initmap();
 
   // Modules
   // ---------------------------------
