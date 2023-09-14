@@ -2397,10 +2397,12 @@ button,
 
 .nav--opened .nav__btn {
   position: relative;
+  max-width: 286px;
   width: 286px;
   background-color: #316dc2;
   color: #ffffff;
   z-index: 555;
+  margin-bottom: 4px;
 }
 
 .nav--opened span:nth-child(2n) {
@@ -2414,6 +2416,26 @@ button,
   height: 20px;
 }
 
+@-webkit-keyframes showMenu {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 278px;
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 278px;
+  }
+}
+
 .nav--opened .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2422,17 +2444,25 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  position: absolute;
-  content: "";
+  max-height: 278px;
+  max-width: 286px;
   width: 286px;
-  top: 105%;
+  overflow: auto;
   margin: 0;
   padding: 30px 25px 12px 25px;
   list-style-type: none;
   background-color: #316dc2;
   border-radius: 16px;
+  -webkit-animation-name: showMenu;
+  animation-name: showMenu;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.nav__dropdown--opened .nav__list {
+  min-height: 398px;
 }
 
 .nav__item {
@@ -4780,6 +4810,10 @@ button,
     padding: 0 45px;
   }
 
+  .nav__dropdown--opened .nav__list {
+    min-height: 398px;
+  }
+
   .hero-slider {
     min-height: 1024px;
   }
@@ -5461,15 +5495,13 @@ button,
   .nav--opened .nav__btn {
     min-width: 290px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 4px auto;
   }
 
   .nav--opened .nav__list {
     min-width: 290px;
     width: 90%;
     padding: 30px 25px 13px 25px;
-    left: 0;
-    right: 0;
     margin: 0 auto;
   }
 
