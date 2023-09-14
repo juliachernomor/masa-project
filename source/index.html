@@ -218,7 +218,7 @@
           </ul>
         </div>
       </section>
-      <section class="main__about-masa about-masa">
+      <section class="main__about-masa about-masa" id="about-masa">
         <div class="about-masa__container container">
           <div class="about-masa__information">
             <div class="about-masa__main">
@@ -449,7 +449,7 @@
           </div>
         </div>
       </section>
-      <section class="main__conditions conditions">
+      <section class="main__conditions conditions" id="conditions">
         <div class="conditions__container container">
           <div class="conditions__wrapper-1">
             <h2>Как поехать</h2>
@@ -492,7 +492,7 @@
           </div>
         </div>
       </section>
-      <section class="main__news news">
+      <section class="main__news news" id="news">
         <div class="news__container container">
           <h2>Новости и материалы</h2>
           <ul class="news__filtration-list">
@@ -741,7 +741,7 @@
         </div>
       </section>
 
-      <section class="main__reviews reviews">
+      <section class="main__reviews reviews" id="reviews">
         <div class="reviews__container container">
           <div class="reviews__swiper swiper swiper--4">
             <h2>Отзывы</h2>
@@ -894,7 +894,7 @@
         </div>
       </section>
 
-      <section class="main__contacts contacts">
+      <section class="main__contacts contacts" id="contacts">
         <div class="contacts__container container">
           <h2>Контакты</h2>
           <ul class="contacts__list">
@@ -964,7 +964,7 @@
             </div>
 
             <div class="custom-select user-contacts__select" data-select data-validate-type="select"
-              data-name="some-name" data-id="id-example-2">
+              data-name="some-name" data-id="id-example-2" data-required="true">
               <p>Выберите город</p>
               <button class="custom-select__button user-contacts__button-select" type="button"
                 aria-label="Выберите одну из опций">
@@ -981,13 +981,6 @@
                 <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-4"
                   aria-selected="false" role="option">Екатеринбург</li>
               </ul>
-              <select id="id-example-2" name="some-name" tabindex="-1" aria-hidden="true">
-                <option value=""></option>
-                <option value="id-1">Санкт-Петербург</option>
-                <option value="id-2">Москва</option>
-                <option value="id-3">Новосибирск</option>
-                <option value="id-4">Екатеринбург</option>
-              </select>
             </div>
 
             <div class="custom-toggle custom-toggle--checkbox user-contacts__checkbox" data-validate-type="checkbox"
@@ -1023,31 +1016,65 @@
     </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </main>
-  <footer class="wrapper__footer footer">
-    <div class="container"></div>
+  <footer class="footer">
+    <div class="footer__container container">
+        <a class="footer__logo" href="#"><span class="visually-hidden">Логотип центра организации туризма</span>
+          <svg width="52" height="52" viewBox="0 0 52 52">
+            <use href="img/sprite.svg#logotype"></use>
+          </svg>
+        </a>
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a href="#about-masa">О&nbsp;проекте</a>
+          </li>
+          <li class="footer__item">
+            <a href="#programs">Программы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#conditions">Как&nbsp;поехать</a>
+          </li>
+          <li class="footer__item">
+            <a href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#news">Новости</a>
+          </li>
+          <li class="footer__item">
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      <ul class="footer__socials">
+        <li class="footer__socials-item">
+          <a href="#"><span class="visually-hidden">
+              Перейти на нашу страницу в Вконтакте.</span>
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <use href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#"><span class="visually-hidden">Перейти на нашу страницу в
+              Одноклассники.</span>
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <use href="img/sprite.svg#ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#"><span class="visually-hidden">
+              Перейти на нашу страницу в Reddit.</span>
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <use href="img/sprite.svg#reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__law-documents">
+      <p href="#">Masa © 2023 Все права защищены</p>
+      <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
   </footer>
   </div>
 
