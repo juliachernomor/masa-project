@@ -3,9 +3,9 @@
 
 @import "vendor/normalize";
 @import "vendor/data-accordion";
-// Swiper 7.4.1
 @import "vendor/swiper";
 @import "vendor/leaflet";
+@import "vendor/auto-resize-textarea";
 
 // Global
 // ---------------------------------
@@ -39,6 +39,10 @@
 @import "blocks/reviews-slider";
 @import "blocks/map";
 @import "blocks/contacts";
+@import "blocks/custom-input";
+@import "blocks/custom-select";
+@import "blocks/custom-toggle";
+@import "blocks/user-contacts";
 
 
 // ---------------------------------

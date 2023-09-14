@@ -6,6 +6,7 @@ import {effectMenu} from './modules/menu';
 import {effectDropMenuNews, effectDropMenuProgramms} from './modules/dropmenu';
 import {initAccordions} from './vendor/init-accordion';
 import {initmap} from './modules/map';
+import {CustomSelect} from './select/custom-select';
 
 // ---------------------------------
 
@@ -31,6 +32,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    const select = new CustomSelect();
+    select.init();
+
     const form = new Form();
     window.form = form;
     form.init();
