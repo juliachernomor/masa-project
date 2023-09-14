@@ -44,15 +44,17 @@
 
 .nav--opened .nav__btn {
   position: relative;
+  max-width: 286px;
   width: 286px;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   z-index: 555;
+  margin-bottom: 4px;
 
   @include vp-767 {
     min-width: 290px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 4px auto;
   }
 }
 
@@ -67,27 +69,44 @@
   }
 }
 
+@keyframes showMenu {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 278px;
+  }
+}
+
 .nav--opened .nav__list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  position: absolute;
-  content: "";
+  max-height: 278px;
+  max-width: 286px;
   width: 286px;
-  top: 105%;
+  overflow: auto;
   margin: 0;
   padding: 30px 25px 12px 25px;
   list-style-type: none;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
+  animation-name: showMenu;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 
   @include vp-767 {
     min-width: 290px;
     width: 90%;
     padding: 30px 25px 13px 25px;
-    left: 0;
-    right: 0;
     margin: 0 auto;
+  }
+}
+
+.nav__dropdown--opened .nav__list {
+  min-height: 398px;
+
+  @include vp-1199 {
+    min-height: 398px;
   }
 }
 
@@ -134,15 +153,12 @@
   border: none;
   user-select: none;
   cursor: pointer;
-
-  // @include vp-767 {
-  //   width: 0;
-  // }
 }
 
 .nav__item--button-open  button {
   margin-bottom: 13px;
 }
+
 
 .nav__item-programs-button span,
 .nav__item-news-button span {

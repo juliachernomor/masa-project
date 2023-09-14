@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {createHeroSlider, createProgramsSlider, createNewsSlider, createReviewsSlider} from './modules/sliders';
 import {effectMenu} from './modules/menu';
-import {effectDropMenuNews, effectDropMenuProgramms} from './modules/dropmenu';
+import {effectDropMenu} from './modules/dropmenu';
 import {initAccordions} from './vendor/init-accordion';
 import {initmap} from './modules/map';
 import {CustomSelect} from './select/custom-select';
@@ -20,8 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   createReviewsSlider();
   iosVhFix();
   effectMenu();
-  effectDropMenuNews();
-  effectDropMenuProgramms();
+  effectDropMenu();
   initAccordions();
   initmap();
 

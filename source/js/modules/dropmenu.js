@@ -1,38 +1,33 @@
-let navDropmenuNews = document.querySelector('.nav__item--news');
-let navDropmenuProgramms = document.querySelector('.nav__item--programms');
-
-let navItemProgrammsButton = document.querySelector('.nav__item-programs-button');
-let navItemNewsButton = document.querySelector('.nav__item-news-button');
+let navDropmenuButtons = document.querySelectorAll('.nav__button-dropdown');
+let nav = document.querySelector('.nav');
 
 const closeMenu = (elementItem) => {
   elementItem.classList.add('nav__item--button-close');
   elementItem.classList.remove('nav__item--button-open');
+  nav.classList.remove('nav__dropdown--opened');
 };
 
 const openMenu = (elementItem) => {
   elementItem.classList.remove('nav__item--button-close');
   elementItem.classList.add('nav__item--button-open');
+  nav.classList.add('nav__dropdown--opened');
 };
 
 
-const effectDropMenuNews = () => {
-  navItemNewsButton.addEventListener('click', function () {
-    if (navDropmenuNews.classList.contains('nav__item--button-close')) {
-      openMenu(navDropmenuNews);
-    } else {
-      closeMenu(navDropmenuNews);
-    }
-  });
+const effectDropMenu = () => {
+  if (document.body.contains(document.querySelector('.nav__item-dropdown'))) {
+    navDropmenuButtons.forEach((navDropmenuButton) =>
+      navDropmenuButton.addEventListener('click', function () {
+        const dropMenu = navDropmenuButton.parentElement;
+        if (dropMenu.classList.contains('nav__item--button-close')) {
+          openMenu(dropMenu);
+        } else {
+          closeMenu(dropMenu);
+        }
+      })
+    );
+  }
 };
 
-const effectDropMenuProgramms = () => {
-  navItemProgrammsButton.addEventListener('click', function () {
-    if (navDropmenuProgramms.classList.contains('nav__item--button-close')) {
-      openMenu(navDropmenuProgramms);
-    } else {
-      closeMenu(navDropmenuProgramms);
-    }
-  });
-};
 
-export {effectDropMenuNews, effectDropMenuProgramms};
+export {effectDropMenu};
