@@ -155,7 +155,7 @@
 
   &:hover,
   &:focus-visible {
-    & span:nth-child(2n) {
+    & .accordion__button-icon {
       background-color: $color-cerulean-blue;
       border: 1px solid $color-default-white;
 
@@ -170,7 +170,7 @@
     color: $color-default-white;
     border: none;
 
-    & span:nth-child(2n) {
+    & .accordion__button-icon {
       background-color: $color-default-white;
       border: none;
 
@@ -185,7 +185,7 @@
   background-color: $color-endeavour;
 }
 
-.is-active span:nth-child(2n) {
+.is-active .accordion__button-icon {
   position: relative;
   background-color: $color-default-white;
 
@@ -269,8 +269,8 @@
   }
 }
 
-.accordion__button--fourth span:nth-child(2n),
-.accordion__button--fifth span:nth-child(2n) {
+.accordion__button--fourth .accordion__button-icon,
+.accordion__button--fifth .accordion__button-icon {
   margin-top: 10px;
 
   @include vp-1199 {
