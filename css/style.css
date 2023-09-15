@@ -5997,6 +5997,10 @@ button,
     padding: 0 45px;
   }
 
+  .header__container {
+    padding-top: 30px;
+  }
+
   .nav__dropdown--opened .nav__list {
     max-height: 50vh;
   }
@@ -6676,7 +6680,7 @@ button,
   }
 
   .footer__container {
-    row-gap: 20px;
+    row-gap: 27px;
   }
 
   .footer__logo {
