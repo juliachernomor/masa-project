@@ -4963,7 +4963,7 @@ button,
 }
 @media (max-width: 1199.5px) {
   .accordion__element.is-active {
-    padding-bottom: 31px;
+    padding-bottom: 25px;
   }
 }
 @media (max-width: 767.5px) {
@@ -5386,6 +5386,27 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 22px;
+  width: 22px;
+}
+.reviews__button-prev:hover, .reviews__button-prev:focus,
+.reviews__button-next:hover,
+.reviews__button-next:focus {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.reviews__button-prev svg,
+.reviews__button-next svg {
+  stroke: #316dc2;
+}
+.reviews__button-prev:active,
+.reviews__button-next:active {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.reviews__button-prev:active svg,
+.reviews__button-next:active svg {
+  opacity: 0.7;
 }
 
 .reviews-slider {
@@ -6621,7 +6642,7 @@ button,
 }
 @media (max-width: 767.5px) {
   .user-contacts__inner-wrapper {
-    row-gap: 20px;
+    row-gap: 19px;
   }
 }
 
@@ -6778,6 +6799,16 @@ button,
   cursor: unset;
   z-index: 1;
 }
+@media (max-width: 1199.5px) {
+  .user-contacts__checkbox {
+    margin-bottom: 29px;
+  }
+}
+@media (max-width: 767.5px) {
+  .user-contacts__checkbox {
+    margin-bottom: 11px;
+  }
+}
 
 .user-contacts__checkbox label {
   opacity: 1;
@@ -6880,9 +6911,15 @@ button,
   color: #f0efe9;
   opacity: 1;
 }
+@media (max-width: 1199.5px) {
+  .user-contacts__button-select {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 767.5px) {
   .user-contacts__button-select {
-    min-height: 44px;
+    margin-bottom: 3px;
+    min-height: 48px;
     height: 44px;
   }
 }
@@ -6919,6 +6956,14 @@ button,
       -ms-flex-order: 1;
           order: 1;
 }
+@media (max-width: 767.5px) {
+  .user-contacts__select p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
 
 .user-contacts__toggle-icon {
   border-radius: 2px;
@@ -6930,7 +6975,7 @@ button,
 }
 @media (max-width: 767.5px) {
   .user-contacts__toggle-icon {
-    top: 12px;
+    top: 14px;
   }
 }
 .user-contacts__toggle-icon:hover, .user-contacts__toggle-icon:focus, .user-contacts__toggle-icon:focus-visible, .user-contacts__toggle-icon:active {
@@ -7007,7 +7052,7 @@ button,
     position: relative;
     margin: 0 0 20px 0;
     width: 100%;
-    margin-bottom: 67px;
+    margin-bottom: 14px;
   }
 }
 
@@ -7021,7 +7066,7 @@ button,
     content: "";
     width: 52px;
     height: 52px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     top: 0;
     left: 0;
     right: 0;

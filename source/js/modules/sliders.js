@@ -71,11 +71,11 @@ const createProgramsSlider = () => {
   }
 };
 
-const elementNews = document.querySelector('.swiper--3');
+const elementNews = document.querySelector('.news__swiper');
 const createNewsSlider = () => {
   if (elementNews) {
     /* eslint-disable */
-    new swiper('.swiper--3', {
+    new swiper('.news__swiper', {
       /* eslint-enable */
       speed: 1500,
       loop: false,
