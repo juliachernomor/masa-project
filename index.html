@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Образование за рубежом">
+  <meta name="description" content="Образовательный проект">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple.png" type="image/png">
@@ -19,17 +19,17 @@
 
 <body>
   <div class="wrapper">
-    <header id="header" class="wrapper__header header">
+    <header id="header" class="header">
       <div class="header__container container">
 
-        <a class="header__logotype" href="#"><span class="visually-hidden">Логотип образовательного центра</span>
-          <svg width="52" height="52" viewBox="0 0 52 52">
+        <a class="header__logotype" tabindex="-1" href="index.html"><span class="visually-hidden">Логотип образовательного проекта. Перейти на главную страницу.</span>
+          <svg width="52" height="52" viewBox="0 0 52 52" tabindex="0">
             <use href="./img/sprite.svg#logotype"></use>
           </svg>
         </a>
 
         <nav class="nav nav--closed nav--nojs">
-          <button class="nav__btn btn" type="button">
+          <button class="nav__btn" type="button">
             <span>Меню</span>
             <span></span>
             <span class="visually-hidden">Открывает и закрывает меню</span>
@@ -39,11 +39,11 @@
             <li class="nav__item">
               <a href="#">O проекте</a>
             </li>
-            <li class="nav__item nav__item-dropdown nav__item--programms nav__item--button nav__item--button-close nav--nojs">
-              <button class="nav__button-dropdown nav__item-programs-button" href="#">
+            <li class="nav__item nav__item-dropdown nav__item--button-close">
+              <button class="nav__button-dropdown" href="#">
                 <span>Программы</span>
               </button>
-              <ul class="nav__dropdown-programs-list">
+              <ul class="nav__dropdown-list">
                 <li class="nav__dropdown-item">
                   <a href="#">Стажировки</a>
                 </li>
@@ -65,11 +65,11 @@
               <a href="#">Отзывы</a>
             </li>
 
-            <li class="nav__item  nav__item-dropdown nav__item--news nav__item--button nav__item--button-close nav--nojs">
-              <button class="nav__button-dropdown nav__item-news-button" href="#">
+            <li class="nav__item  nav__item-dropdown nav__item--button-close">
+              <button class="nav__button-dropdown" href="#">
                 <span>Новости</span>
               </button>
-              <ul class="nav__dropdown-news-list">
+              <ul class="nav__dropdown-list">
                 <li class="nav__dropdown-item">
                   <a href="#">100 лет со дня основания</a>
                 </li>
@@ -128,9 +128,9 @@
                   <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
                     организациях.</p>
                   <div class="hero-slider__button-wrapper">
-                    <a class="hero-slider__btn btn" href="#">
+                    <a class="hero-slider__btn btn btn--light" href="#">
                       <span>Подробнее</span>
-                      <span class="diagonal-row"></span>
+                      <span class="diagonal-row diagonal-row--light"></span>
                     </a>
                   </div>
                 </div>
@@ -168,9 +168,9 @@
                   <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
                     и&nbsp;другое.</p>
                   <div class="hero-slider__button-wrapper">
-                    <a class="hero-slider__btn btn" href="#">
+                    <a class="hero-slider__btn btn btn--light" href="#">
                       <span>Подробнее</span>
-                      <span class="diagonal-row"></span>
+                      <span class="diagonal-row diagonal-row--light"></span>
                     </a>
                   </div>
                 </div>
@@ -207,9 +207,9 @@
                   <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
                     настоящий израильский стиль жизни!</p>
                   <div class="hero-slider__button-wrapper">
-                    <a class="hero-slider__btn btn" href="#">
+                    <a class="hero-slider__btn btn btn--light" href="#">
                       <span>Подробнее</span>
-                      <span class="diagonal-row"></span>
+                      <span class="diagonal-row diagonal-row--light"></span>
                     </a>
                   </div>
                 </div>
@@ -232,10 +232,10 @@
                 специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя&nbsp;им инструменты для решения
                 сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель
                 центра&nbsp;– наделить этих людей способностью инициировать значимые изменения.</p>
-              <a class="about-masa__btn btn" href="#">
+              <button class="about-masa__btn btn btn--light" type="button" aria-label="Заполнить форму обратной связи." data-open-modal="modal-1">
                 <span>Подробнее о&nbsp;проекте</span>
-                <span class="diagonal-row"></span>
-              </a>
+                <span class="diagonal-row diagonal-row--light"></span>
+              </button>
             </div>
           </div>
           <ul class="about-masa__advantages-list">
@@ -292,9 +292,9 @@
         <div class="programs__container container">
           <div class="programs__swiper swiper swiper--2">
             <h2>Программы</h2>
-            <a class="programs__btn btn" href="#">
+            <a class="programs__btn btn btn--light" href="#">
               <span>Все программы</span>
-              <span class="diagonal-row"></span>
+              <span class="diagonal-row diagonal-row--light"></span>
             </a>
             <div class="programs__wrapper swiper-wrapper">
               <div class="programs__slider programs-slider swiper-slide">
@@ -312,7 +312,7 @@
                   <h3>Стажировки</h3>
                   <p>
                     <span>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о стажировках.</span></a>
                   </p>
                 </div>
               </div>
@@ -331,7 +331,7 @@
                   <h3>Волонтёрство</h3>
                   <p>
                     <span>Помогайте другим&nbsp;и развивайте свои лидерские качества.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -350,7 +350,7 @@
                   <h3>Учеба</h3>
                   <p>
                     <span>Получите образование и&nbsp;измените свое будущее.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией об учебе.</span></a>
                   </p>
                 </div>
               </div>
@@ -369,7 +369,7 @@
                   <h3>Волонтёрство</h3>
                   <p>
                     <span>Помогайте другим&nbsp;и развивайте свои лидерские качества.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -388,7 +388,7 @@
                   <h3>Стажировки</h3>
                   <p>
                     <span>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о стажировках.</span></a>
                   </p>
                 </div>
               </div>
@@ -407,7 +407,7 @@
                   <h3>Стажировки</h3>
                   <p>
                     <span>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о стажировках.</span></a>
                   </p>
                 </div>
               </div>
@@ -426,7 +426,7 @@
                   <h3>Стажировки</h3>
                   <p>
                     <span>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о стажировках.</span></a>
                   </p>
                 </div>
               </div>
@@ -496,7 +496,7 @@
         <div class="news__container container">
           <h2>Новости и материалы</h2>
           <ul class="news__filtration-list">
-            <li class="news__filtration-item">Общее</li>
+            <li class="news__filtration-item news__filtration-item--current">Общее</li>
             <li class="news__filtration-item">Волонтерство</li>
             <li class="news__filtration-item">Стажировки</li>
             <li class="news__filtration-item">Карьера</li>
@@ -521,7 +521,7 @@
                   <p>
                     <span>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как&nbsp;прошла 6-месячная стажировка
                       в&nbsp;ISOFound</span>
-                    <span class="diagonal-row"></span>
+                      <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -541,7 +541,7 @@
                   <h3 class="news-slider__content-h3">Путешествуем<br> по Израилю</h3>
                   <p>
                     <span>Какие места посещают наши студенты весной</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -561,7 +561,7 @@
                   <h3>Новая программа волонтёрства</h3>
                   <p>
                     <span>Программа помощи детям длительностью 4&nbsp;месяца</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -581,7 +581,7 @@
                   <h3>Построй свою карьеру</h3>
                   <p>
                     <span>Ведущие компании готовы трудоустроить выпускников стажировки</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -601,7 +601,7 @@
                   <h3>Построй свою карьеру</h3>
                   <p>
                     <span>Ведущие компании готовы трудоустроить выпускников стажировки</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -621,7 +621,7 @@
                   <h3>Новая программа волонтёрства</h3>
                   <p>
                     <span>Программа помощи детям длительностью 4&nbsp;месяца</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
@@ -641,10 +641,11 @@
                   <h3 class="news-slider__content-h3">Путешествуем<br> по Израилю</h3>
                   <p>
                     <span>Какие места посещают наши студенты весной</span>
-                    <span class="diagonal-row"></span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на страницу с информацией о волонтерстве.</span></a>
                   </p>
                 </div>
               </div>
+            </div>
             </div>
             <div class="news__move-slide">
               <div class="news__button-prev">
@@ -658,7 +659,6 @@
                   <use href="./img/sprite.svg#right-arrow"></use>
                 </svg>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -708,8 +708,8 @@
                 </p>
               </div>
             </li>
-            <li class="accordion__element accordion__element--fourth" data-accordion="element">
-              <button class="accordion__button" type="button" data-accordion="button">
+            <li class="accordion__element" data-accordion="element">
+              <button class="accordion__button  accordion__button--fourth" type="button" data-accordion="button">
                 <span class="accordion__span">Признаётся&nbsp;ли учеба в&nbsp;рамках проекта<br> для дальнейшего
                   обучения?</span>
                 <span></span>
@@ -723,8 +723,8 @@
                 </p>
               </div>
             </li>
-            <li class="accordion__element accordion__element--fifth" data-accordion="element">
-              <button class="accordion__button" type="button" data-accordion="button">
+            <li class="accordion__element" data-accordion="element">
+              <button class="accordion__button accordion__button--fifth" type="button" data-accordion="button">
                 <span>Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</span>
                 <span></span>
                 <span class="visually-hidden">Открыть</span>
@@ -994,9 +994,9 @@
               </label>
             </div>
 
-            <button class="user-contacts__btn btn">
+            <button class="user-contacts__btn btn btn--dark">
               <span>Отправить</span>
-              <span class="diagonal-row"></span>
+              <span class="diagonal-row diagonal-row--dark"></span>
             </button>
           </div>
         </form>
@@ -1079,32 +1079,76 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <div class="modal" data-modal="modal-1">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
+
+      <div class="modal__content feedback">
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
+          <svg width="22" height="22"  aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#cross"></use>
           </svg>
         </button>
+        <div class="feedback__wrapper" data-form-validate data-callback="base">
+        <h2>Напишите нам</h2>
+        <p>Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
+          <form action="https://echo.htmlacademy.ru/" method="post" novalidate>
+            <div class="feedback__inner-wrapper">
+
+              <div class="custom-input feedback__input" data-validate-type="text" data-limitation="name"
+                data-required="data-required">
+                <input type="text" name="user-name-1" placeholder="" id="name-second-from" aria-label="Введите ваше имя.">
+                <label for="name-second-from">Имя</label>
+              </div>
+
+              <div class="custom-input feedback__input feedback__input--phone" data-validate-type="phone"
+                data-on-input-validate="data-on-input-validate" data-required="data-required" data-phone-length="18">
+                <input type="tel" name="user-phone" placeholder="" id="mobile-number-second-from"
+                  aria-label="Введите ваш телефон.">
+                  <label for="mobile-number-second-from">Телефон</label>
+              </div>
+
+              <div class="custom-select feedback__select" data-select data-validate-type="select"
+                data-name="some-name" data-id="id-example-2" data-required="true">
+                <button class="custom-select__button feedback__button-select" type="button"
+                  aria-label="Выберите одну из опций">
+                  <span class="custom-select__text feedback__select-text"></span>
+                  <span class="custom-select__icon feedback__select-icon"></span>
+                </button>
+                <p>Выберите город</p>
+                <ul class="custom-select__list feedback__select-list" role="listbox">
+                  <li class="custom-select__item feedback__select-item" tabindex="0" data-select-value="id-1"
+                    aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item feedback__select-item" tabindex="0" data-select-value="id-2"
+                    aria-selected="false" role="option">Москва</li>
+                  <li class="custom-select__item feedback__select-item" tabindex="0" data-select-value="id-3"
+                    aria-selected="false" role="option">Новосибирск</li>
+                  <li class="custom-select__item feedback__select-item" tabindex="0" data-select-value="id-4"
+                    aria-selected="false" role="option">Екатеринбург</li>
+                </ul>
+              </div>
+
+              <div class="custom-toggle custom-toggle--checkbox feedback__checkbox" data-validate-type="checkbox"
+                data-message-base="">
+                <label>
+                  <input type="checkbox" value="user-agreement-1" name="user-agreement" tabindex="-1">
+                  <span class="custom-toggle__icon feedback__toggle-icon" tabindex="0">
+                  </span>
+                  <span class="custom-toggle__label feedback__checkbox-label">Я согласен на обработку моих
+                    персональных данных</span>
+                </label>
+              </div>
+
+              <button class="feedback__btn btn btn--dark">
+                <span>Отправить</span>
+                <span class="diagonal-row diagonal-row--dark"></span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>
