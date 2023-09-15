@@ -6138,6 +6138,11 @@ button,
     width: 80%;
   }
 
+  .accordion__button span:nth-child(2n) {
+    max-width: 40px;
+    width: 40px;
+  }
+
   .accordion__content {
     width: 87%;
     max-width: unset;
@@ -7012,6 +7017,11 @@ button,
 
   .accordion__span br {
     display: none;
+  }
+
+  .accordion__button span:nth-child(2n) {
+    max-width: 40px;
+    width: 40px;
   }
 
   .accordion__content {
