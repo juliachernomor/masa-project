@@ -4,14 +4,14 @@
   height: auto;
   background-color: $color-rodeo-dust;
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(49,109,194,.2);
+    background: rgba(49, 109, 194, 0.2);
     z-index: 1;
   }
 
@@ -163,7 +163,7 @@
   padding: 40px 50px 30px 50px;
   margin-top: -2px;
   background-color: $color-default-white;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0 30px 30px 0;
 
   @include vp-1199 {
     padding: 30px 40px 24px 40px;
@@ -174,7 +174,7 @@
     padding: 20px 14px 16px 14px;
     width: 100%;
     margin-top: -1px;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0 16px 16px 0;
   }
 }
 
@@ -211,7 +211,7 @@
   padding: 0 50px 33px 50px;
   width: 62.2%;
   background-color: $color-default-white;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0 0 30px 30px;
 
   &::after {
     position: absolute;
@@ -279,6 +279,7 @@
     line-height: 20px;
     width: 57%;
   }
+
   @include vp-767 {
     width: 100%;
     margin-top: -2px;
@@ -288,7 +289,7 @@
     font-weight: 400;
     line-height: 20px;
     background-color: $color-default-white;
-    border-radius: 0px 0 14px 0;
+    border-radius: 0 0 14px 0;
   }
 }
 

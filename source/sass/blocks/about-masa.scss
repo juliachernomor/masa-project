@@ -122,9 +122,9 @@
   margin: 0 0 32px 0;
 
   @include vp-1199 {
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 35px;
   }
 
   @include vp-767 {
@@ -165,8 +165,7 @@
 .about-masa__btn span:nth-child(1n) {
   @include vp-767 {
     font-size: 12px;
-    line-height: 10px
-
+    line-height: 10px;
   }
 }
 
@@ -235,7 +234,7 @@
   }
 
   @include vp-767 {
-    justify-self:center;
+    justify-self: center;
   }
 }
 
@@ -330,11 +329,11 @@
   max-width: 144px;
 
   @include vp-1199 {
-    max-width: 111px
+    max-width: 111px;
   }
 
   @include vp-767 {
-    max-width: 100%
+    max-width: 100%;
   }
 }
 
@@ -342,11 +341,11 @@
   max-width: 171px;
 
   @include vp-1199 {
-    max-width: 132px
+    max-width: 132px;
   }
 
   @include vp-767 {
-    max-width: 100%
+    max-width: 100%;
   }
 }
 
@@ -358,7 +357,7 @@
   }
 
   @include vp-767 {
-    max-width: 100%
+    max-width: 100%;
   }
 }
 
@@ -370,7 +369,7 @@
   }
 
   @include vp-767 {
-    max-width: 100%
+    max-width: 100%;
   }
 }
 
@@ -378,7 +377,7 @@
   max-width: 167px;
 
   @include vp-767 {
-    max-width: 80%
+    max-width: 75%;
   }
 }
 
@@ -386,15 +385,7 @@
   max-width: 178px;
 
   @include vp-767 {
-    max-width: 80%
-  }
-}
-
-.about-masa__advantages-text--second p {
-  max-width: 167px;
-
-  @include vp-767 {
-    max-width: 75%
+    max-width: 80%;
   }
 }
 
@@ -402,7 +393,7 @@
   max-width: 190px;
 
   @include vp-767 {
-    max-width: 82%
+    max-width: 82%;
   }
 }
 
@@ -410,10 +401,6 @@
   max-width: 164px;
 
   @include vp-767 {
-    max-width: 75%
+    max-width: 75%;
   }
 }
-
-
-
-

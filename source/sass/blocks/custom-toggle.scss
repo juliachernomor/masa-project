@@ -61,7 +61,7 @@
         left: 10px;
         width: 10px;
         height: 10px;
-        background-color: #fff;
+        background-color: $color-default-white;
 
         transform: translate(-50%, -50%);
         transition: background-color 0.3s ease;
@@ -106,7 +106,7 @@
     border: 1.5px solid #2c39f2;
 
     &::before {
-      mask-image: url('../img/sprite/check.svg');
+      mask-image: url("../img/sprite/check.svg");
       background-color: rgba(49, 109, 194, 0.7);
     }
   }

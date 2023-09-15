@@ -48,21 +48,21 @@
 
 
 .btn:hover .diagonal-row--light,
-.btn:focus .diagonal-row--light  {
+.btn:focus .diagonal-row--light {
   background-color: $color-default-white;
 }
 
 .btn:hover .diagonal-row--light::after,
 .btn:focus .diagonal-row--light::after {
-    background-color: $color-cerulean-blue;
-    mask-image: url("../img/sprite/button-right-arrow.svg");
-    width: 12px;
-    height: 11px;
-    outline: none;
+  background-color: $color-cerulean-blue;
+  mask-image: url("../img/sprite/button-right-arrow.svg");
+  width: 12px;
+  height: 11px;
+  outline: none;
 }
 
 .btn:hover .diagonal-row--dark,
-.btn:focus .diagonal-row--dark  {
+.btn:focus .diagonal-row--dark {
   background-color: $color-cerulean-blue;
 }
 
@@ -74,7 +74,3 @@
   height: 11px;
   outline: none;
 }
-
-
-
-

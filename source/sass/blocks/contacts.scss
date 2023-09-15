@@ -140,6 +140,17 @@
   line-height: 26px;
   color: $color-default-white;
 
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.8;
+    border-bottom: none;
+  }
+
   @include vp-1199 {
     line-height: 20px;
   }

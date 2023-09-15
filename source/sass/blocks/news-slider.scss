@@ -6,34 +6,34 @@
   max-width: 286px;
   overflow: hidden;
 
-  @media (max-width: 1250px){
+  @media (max-width: 1250px) {
     max-width: 242px;
   }
 
-    &:first-child {
-      width: 48.8%;
-      max-width: 604px;
+  &:first-child {
+    width: 48.8%;
+    max-width: 604px;
 
-      @media (max-width: 1250px){
-        max-width: 493px;
-
-        @include vp-1199 {
-          max-width: unset;
-        }
-      }
+    @media (max-width: 1250px) {
+      max-width: 493px;
 
       @include vp-1199 {
-        min-width: 324px;
-        max-width: 100%;
-      }
-
-      @include vp-767 {
-        min-width: 290px;
-        min-height: 330px;
-        height: 103.1vw;
-        max-width: 100%;
+        max-width: unset;
       }
     }
+
+    @include vp-1199 {
+      min-width: 324px;
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      min-width: 290px;
+      min-height: 330px;
+      height: 103.1vw;
+      max-width: 100%;
+    }
+  }
 
   @include vp-1199 {
     min-width: 324px;
@@ -81,13 +81,13 @@
 
 .news-slider--sixth {
   @include vp-1199 {
-    order:6;
+    order: 6;
   }
 }
 
 .news-slider--seventh {
   @include vp-1199 {
-    order:5;
+    order: 5;
   }
 }
 
@@ -108,6 +108,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 3;
 
   @include vp-1199 {
     width: 88.1%;
@@ -118,7 +119,7 @@
   }
 }
 
-.news-slider:first-child .news-slider__content  {
+.news-slider:first-child .news-slider__content {
   width: 69.3%;
 
   @include vp-1199 {
@@ -138,13 +139,13 @@
   letter-spacing: 0.12px;
   margin: 0;
   padding: 8px 12px 10px 0;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   background-color: $color-default-white;
 
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 18px;
     height: 18px;
     left: 99%;
@@ -154,7 +155,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 18px;
     height: 18px;
     left: 0;
@@ -170,7 +171,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 16px;
     height: 16px;
     left: 99%;
@@ -180,7 +181,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 16px;
     height: 16px;
     left: 0;
@@ -200,7 +201,7 @@
   line-height: 26px;
   margin: 0;
   padding: 6px 12px 0 0;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   background-color: $color-default-white;
 
   @media (min-width: 1200px) and (max-width: 1440px) {
@@ -210,8 +211,8 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
-    width:18px;
+    background-image: url("../img/sprite/angle-top.svg");
+    width: 18px;
     height: 18px;
     left: 99.6%;
     bottom: 0;
@@ -233,7 +234,6 @@
 
 .news-slider:first-child h3 {
   position: relative;
-  padding: 6px 12px 6px 0;
   margin-top: -1px;
   padding: 15px 12px 6px 0;
   width: 70%;
@@ -241,7 +241,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 18px;
     height: 18px;
     left: 99.8%;
@@ -268,19 +268,20 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   margin: -1px 0 0 0;
-  border-radius: 0px 12px;
-  padding: 8px 18px 14px 0;
+  border-radius: 0 12px;
+  padding: 8px 18px 12px 0;
   background-color: $color-default-white;
 
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
-    width:18px;
+    background-image: url("../img/sprite/angle-top.svg");
+    width: 18px;
     height: 18px;
     left: 99.6%;
     bottom: 0;
   }
+
   @include vp-1199 {
     padding: 8px 18px 10px 0;
   }
@@ -295,12 +296,12 @@
   position: relative;
   margin-top: -3px;
   width: 93%;
-  padding: 8px 18px 13px 0;
+  padding: 8px 18px 11px 0;
 
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/sprite/angle-top.svg);
+    background-image: url("../img/sprite/angle-top.svg");
     width: 19px;
     height: 19px;
     left: 99.5%;
@@ -334,7 +335,6 @@
   }
 
   @include vp-767 {
-    // width: 90%;
     font-size: 12px;
     line-height: 14px;
   }
@@ -371,6 +371,7 @@
     height: 11px;
     outline: none;
   }
+
   &:active::after {
     opacity: 0.7;
   }

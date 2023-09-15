@@ -25,11 +25,11 @@
     height: 70px;
     top: 16.3%;
     left: 49%;
-    background-image: url('../img/sprite/pin.svg');
+    background-image: url("../img/sprite/pin.svg");
     background-size: 70px 70px;
     background-repeat: no-repeat;
 
-   @include vp-1199 {
+    @include vp-1199 {
       width: 40px;
       height: 40px;
       background-size: 40px 40px;
@@ -80,7 +80,7 @@
   }
 
   @include vp-767 {
-    min-height:unset;
+    min-height: unset;
     height: 240px;
   }
 }
@@ -90,7 +90,6 @@
   display: block;
   grid-column: 1/2;
   grid-row: 1/2;
-  height: auto;
   width: 100%;
   height: 500px;
   margin: 0;

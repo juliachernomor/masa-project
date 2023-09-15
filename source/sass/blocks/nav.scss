@@ -95,6 +95,7 @@
   0% {
     height: 0%;
   }
+
   100% {
     height: 278px;
   }
@@ -155,16 +156,17 @@
   }
 }
 
-.nav__dropdown-item  {
+.nav__dropdown-item {
   margin: 0 0 4px 0;
-
 }
+
 .nav__dropdown-item a {
   text-transform: none;
 }
 
-.nav__item--button-open  button {
+.nav__item--button-open button {
   margin-bottom: 13px;
+  opacity: 1;
 }
 
 .nav__button-dropdown {
@@ -193,12 +195,12 @@
   }
 }
 
-.nav__button-dropdown span  {
+.nav__button-dropdown span {
   position: relative;
 
   &::after {
     position: absolute;
-    content:  "";
+    content: "";
     background-image: url("../img/sprite/arrow-down.svg");
     background-repeat: no-repeat;
     width: 12px;
@@ -232,15 +234,8 @@
   margin-bottom: 12px;
 }
 
-.nav__item--button-open button {
-  opacity: 1;
-}
-
-.nav__item--button-open span::after{
-  transform: rotate(180deg);
-}
-
 .nav__item--button-open span::after {
+  transform: rotate(180deg);
   opacity: 1;
 }
 

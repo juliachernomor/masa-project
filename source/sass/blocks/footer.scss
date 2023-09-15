@@ -4,7 +4,7 @@
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 23px;
+  row-gap: 27px;
   padding-bottom: 50px;
   color: $color-default-charcoal;
 
@@ -19,7 +19,8 @@
 }
 
 .footer__logo {
-  width: 4.19%;
+  width: 52px;
+  height: 52px;
   margin-right: 4.2%;
 
   @include vp-1199 {
@@ -34,23 +35,27 @@
   }
 }
 
-.footer__logo svg{
-  position: absolute;
-  content: "";
+.footer__logo svg {
   width: 52px;
   height: 52px;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+
+  @include vp-767 {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
-  width: 48.6%;
+  width: 58.6%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -75,13 +80,22 @@
   }
 }
 
-.footer__item  {
+.footer__item {
   max-width: 100px;
 }
 
 .footer__item a {
   color: $color-default-charcoal;
 
+  &:hover,
+  &:focus-visible {
+    color: $color-cerulean-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-endeavour;
+  }
 
   @include vp-1199 {
     font-size: 16px;
@@ -97,12 +111,13 @@
 
 .footer__socials {
   display: flex;
+  justify-content: end;
   flex-wrap: wrap;
   column-gap: 20px;
   list-style-type: none;
   margin: 0 0 0 auto;
   padding: 0;
-  width: 11.9%;
+  width: 25%;
 
   @include vp-1199 {
     order: 4;
@@ -119,21 +134,45 @@
 }
 
 .footer__socials-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 36px;
+  max-width: 36px;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  background-color: $color-cerulean-blue;
+
 
   @include vp-767 {
-    min-width: 26px;
+    max-width: 26px;
     width: 26px;
     height: 26px;
   }
 }
+
+.footer__socials-item a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  cursor: pointer;
+
+  & svg {
+    fill: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    opacity: 1;
+  }
+}
+
 
 .footer__socials-item svg {
   display: flex;
@@ -161,7 +200,7 @@
     width: 194px;
     order: 3;
     font-size: 12px;
-    line-height: 12px
+    line-height: 12px;
   }
 
   @include vp-767 {
@@ -174,7 +213,19 @@
 .footer__law-documents a {
   margin: 0 0 0 auto;
   color: $color-default-charcoal;
-  border-bottom: 1px solid #484848;
+  border-bottom: 1px solid $color-default-charcoal;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-cerulean-blue;
+    border-bottom: 1px solid $color-cerulean-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-endeavour;
+    border-bottom: 1px solid $color-endeavour;
+  }
 
   @include vp-1199 {
     margin: 0 0 10px 0;

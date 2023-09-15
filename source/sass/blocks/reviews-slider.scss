@@ -151,9 +151,9 @@
   line-height: 26px;
 
   @include vp-1199 {
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 17px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 17px;
   }
 
   @include vp-767 {
