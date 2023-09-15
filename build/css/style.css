@@ -2286,6 +2286,11 @@ button,
   padding-top: 30px;
   z-index: 3;
 }
+@media (max-width: 1199.5px) {
+  .header__container {
+    padding-top: 30px;
+  }
+}
 @media (max-width: 767.5px) {
   .header__container {
     padding-top: 19px;
@@ -7025,7 +7030,7 @@ button,
 }
 @media (max-width: 1199.5px) {
   .footer__container {
-    row-gap: 20px;
+    row-gap: 27px;
   }
 }
 @media (max-width: 767.5px) {

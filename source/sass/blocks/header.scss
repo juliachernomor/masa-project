@@ -11,6 +11,10 @@
   padding-top: 30px;
   z-index: 3;
 
+  @include vp-1199 {
+    padding-top: 30px;
+  }
+
   @include vp-767 {
     padding-top: 19px;
   }
