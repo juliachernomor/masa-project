@@ -5093,6 +5093,18 @@ button,
   bottom: 0;
   margin: auto;
 }
+@media (max-width: 1199.5px) {
+  .accordion__button span:nth-child(2n) {
+    max-width: 40px;
+    width: 40px;
+  }
+}
+@media (max-width: 767.5px) {
+  .accordion__button span:nth-child(2n) {
+    max-width: 40px;
+    width: 40px;
+  }
+}
 
 .is-active .accordion__button {
   padding-bottom: 0;
