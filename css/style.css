@@ -4147,6 +4147,32 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 22px;
+  width: 22px;
+}
+
+.reviews__button-prev:hover,
+.reviews__button-prev:focus,
+.reviews__button-next:hover,
+.reviews__button-next:focus {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.reviews__button-prev svg,
+.reviews__button-next svg {
+  stroke: #316dc2;
+}
+
+.reviews__button-prev:active,
+.reviews__button-next:active {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.reviews__button-prev:active svg,
+.reviews__button-next:active svg {
+  opacity: 0.7;
 }
 
 .reviews-slider {
@@ -6425,7 +6451,7 @@ button,
   }
 
   .accordion__element.is-active {
-    padding-bottom: 31px;
+    padding-bottom: 25px;
   }
 
   .accordion__button {
@@ -6639,6 +6665,14 @@ button,
 
   .user-contacts__textarea {
     margin: 0;
+  }
+
+  .user-contacts__checkbox {
+    margin-bottom: 29px;
+  }
+
+  .user-contacts__button-select {
+    margin-bottom: 0;
   }
 
   .footer__container {
@@ -7589,7 +7623,7 @@ button,
   }
 
   .user-contacts__inner-wrapper {
-    row-gap: 20px;
+    row-gap: 19px;
   }
 
   .user-contacts__inner-wrapper label {
@@ -7612,17 +7646,29 @@ button,
     height: 34px;
   }
 
+  .user-contacts__checkbox {
+    margin-bottom: 11px;
+  }
+
   .user-contacts__checkbox label {
     padding-left: 30px;
   }
 
   .user-contacts__button-select {
-    min-height: 44px;
+    margin-bottom: 3px;
+    min-height: 48px;
     height: 44px;
   }
 
+  .user-contacts__select p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
   .user-contacts__toggle-icon {
-    top: 12px;
+    top: 14px;
   }
 
   .footer__container {
@@ -7634,7 +7680,7 @@ button,
     position: relative;
     margin: 0 0 20px 0;
     width: 100%;
-    margin-bottom: 67px;
+    margin-bottom: 14px;
   }
 
   .footer__logo svg {
@@ -7642,7 +7688,7 @@ button,
     content: "";
     width: 52px;
     height: 52px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     top: 0;
     left: 0;
     right: 0;
