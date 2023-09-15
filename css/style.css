@@ -3989,14 +3989,14 @@ button,
   color: #ffffff;
 }
 
-.is-active .accordion__button:hover span:nth-child(2n),
-.is-active .accordion__button:focus-visible span:nth-child(2n) {
+.is-active .accordion__button:hover .accordion__button-icon,
+.is-active .accordion__button:focus-visible .accordion__button-icon {
   background-color: #316dc2;
   border: 1px solid #ffffff;
 }
 
-.is-active .accordion__button:hover span:nth-child(2n)::before,
-.is-active .accordion__button:focus-visible span:nth-child(2n)::before {
+.is-active .accordion__button:hover .accordion__button-icon::before,
+.is-active .accordion__button:focus-visible .accordion__button-icon::before {
   background-color: #ffffff;
 }
 
@@ -4006,12 +4006,12 @@ button,
   border: none;
 }
 
-.is-active .accordion__button:active span:nth-child(2n) {
+.is-active .accordion__button:active .accordion__button-icon {
   background-color: #ffffff;
   border: none;
 }
 
-.is-active .accordion__button:active span:nth-child(2n)::before {
+.is-active .accordion__button:active .accordion__button-icon::before {
   background-color: #275699;
 }
 
@@ -4019,12 +4019,12 @@ button,
   background-color: #275699;
 }
 
-.is-active span:nth-child(2n) {
+.is-active .accordion__button-icon {
   position: relative;
   background-color: #ffffff;
 }
 
-.is-active span:nth-child(2n)::before {
+.is-active .accordion__button-icon::before {
   position: absolute;
   content: "";
   -webkit-mask-image: url("../img/sprite/minus.svg");
@@ -4063,8 +4063,8 @@ button,
   padding-top: 30px;
 }
 
-.accordion__button--fourth span:nth-child(2n),
-.accordion__button--fifth span:nth-child(2n) {
+.accordion__button--fourth .accordion__button-icon,
+.accordion__button--fifth .accordion__button-icon {
   margin-top: 10px;
 }
 
@@ -5930,7 +5930,7 @@ button,
   padding-left: 30px;
 }
 
-.feedback__btn span:nth-child(2n) {
+.feedback__btn .diagonal-row--popup {
   width: 46px;
   height: 46px;
 }
@@ -6498,8 +6498,8 @@ button,
     padding-bottom: 25px;
   }
 
-  .accordion__button--fourth span:nth-child(2n),
-  .accordion__button--fifth span:nth-child(2n) {
+  .accordion__button--fourth .accordion__button-icon,
+  .accordion__button--fifth .accordion__button-icon {
     margin-top: 0;
   }
 
@@ -7859,7 +7859,7 @@ button,
     padding-right: 30px;
   }
 
-  .feedback__btn span:nth-child(2n) {
+  .feedback__btn .diagonal-row--popup {
     width: 34px;
     min-width: 34px;
     height: 34px;
