@@ -146,4 +146,25 @@
 .programs__button-next {
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  & svg {
+    stroke: $color-cerulean-blue;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    border-radius: 50%;
+
+    & svg {
+      opacity: 0.7;
+    }
+  }
 }
+
+

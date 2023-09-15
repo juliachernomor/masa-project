@@ -7,6 +7,8 @@ import {effectDropMenu} from './modules/dropmenu';
 import {initAccordions} from './vendor/init-accordion';
 import {initmap} from './modules/map';
 import {CustomSelect} from './select/custom-select';
+import {replaceCurrentClass} from './modules/news-filter';
+
 
 // ---------------------------------
 
@@ -14,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  replaceCurrentClass();
   createHeroSlider();
   createProgramsSlider();
   createNewsSlider();

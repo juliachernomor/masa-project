@@ -1,0 +1,14 @@
+.swiper-button-disabled svg,
+.swiper-button-disabled svg {
+  stroke: $color-mischka;
+}
+
+.swiper-button-disabled,
+.swiper-button-disabled {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    outline: none;
+  }
+}

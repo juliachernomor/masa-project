@@ -30,7 +30,7 @@ const openMenu = () => {
 };
 
 const onDocumentOutside = (evt) => {
-  if (evt.target === header || header.contains(evt.target)) {
+  if (evt.target === nav || nav.contains(evt.target)) {
     return;
   } else {
     closeMenu();

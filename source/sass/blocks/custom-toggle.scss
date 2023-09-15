@@ -106,13 +106,14 @@
     border: 1.5px solid #2c39f2;
 
     &::before {
-      background-image: url('../img/sprite/check.svg');
+      mask-image: url('../img/sprite/check.svg');
+      background-color: rgba(49, 109, 194, 0.7);
     }
   }
 
   &.is-invalid {
     label span {
-      color: #ff1553;
+      color: $color-default-charcoal;
     }
   }
 

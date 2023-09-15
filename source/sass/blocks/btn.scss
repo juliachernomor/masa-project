@@ -17,19 +17,64 @@
   user-select: none;
   cursor: pointer;
 
-//   transition: opacity $trans-default;
+  &--light {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+    border: 1px solid  $color-cerulean-blue;
 
-//   &--red {
-//     background-color: $color-torch-red;
-//   }
+    &:hover,
+    &:focus {
+      background-color: $color-cerulean-blue;
+      border: 1px solid $color-default-white;
+      color: $color-default-white;
+      outline: none;
+    }
+  }
 
-//   &:disabled {
-//     opacity: 0.5;
+  &--dark {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-default-white;
 
-//     pointer-events: none;
-//   }
-
-//   @include hover-focus {
-//     opacity: 0.8;
-//   }
+    &:hover,
+    &:focus {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
+      border: 1px solid  $color-cerulean-blue;
+      outline: none;
+    }
+  }
 }
+
+
+.btn:hover .diagonal-row--light,
+.btn:focus .diagonal-row--light  {
+  background-color: $color-default-white;
+}
+
+.btn:hover .diagonal-row--light::after,
+.btn:focus .diagonal-row--light::after {
+    background-color: $color-cerulean-blue;
+    mask-image: url("../img/sprite/button-right-arrow.svg");
+    width: 12px;
+    height: 11px;
+    outline: none;
+}
+
+.btn:hover .diagonal-row--dark,
+.btn:focus .diagonal-row--dark  {
+  background-color: $color-cerulean-blue;
+}
+
+.btn:hover .diagonal-row--dark::after,
+.btn:focus .diagonal-row--dark::after {
+  background-color: $color-default-white;
+  mask-image: url("../img/sprite/button-right-arrow.svg");
+  width: 12px;
+  height: 11px;
+  outline: none;
+}
+
+
+
+

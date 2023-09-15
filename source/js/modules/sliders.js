@@ -45,6 +45,7 @@ const createProgramsSlider = () => {
       breakpoints: {
         320: {
           slidesPerView: 1,
+          spaceBetween: 20,
           allowTouchMove: true,
         },
         768: {

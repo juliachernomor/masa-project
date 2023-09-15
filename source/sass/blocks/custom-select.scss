@@ -82,19 +82,6 @@
     @include vp-767 {
       margin: 1px;
     }
-
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
-    }
   }
 
   &__list {
@@ -126,38 +113,14 @@
     cursor: pointer;
 
     transition: background-color 0.3s ease;
-
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
   }
 
   &__error {
     position: absolute;
     bottom: -15px;
     left: 0;
-
-    color: #ff1553;
+    background-color: $color-wild-watermelon-transparent;
+    border: 1px solid $color-wild-watermelon;
 
     opacity: 0;
 
@@ -248,11 +211,14 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      background-color: $color-wild-watermelon-transparent;
+      border: 1px solid $color-wild-watermelon;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        background-color: $color-wild-watermelon-transparent;
+        border: 1px solid $color-wild-watermelon;
+        outline: none;
       }
     }
   }

@@ -1,9 +1,9 @@
 .questions__container {
   color: $color-cerulean-blue;
-  padding-bottom: 124px;
+  padding-bottom: 120px;
 
   @include vp-1199 {
-    padding-bottom: 100px;
+    padding-bottom: 99px;
   }
 
   @include vp-767 {
@@ -13,7 +13,7 @@
 
 .questions__container h2 {
   max-width: 427px;
-  margin: 0 auto 66px auto;
+  margin: 0 auto 67px auto;
   text-align: center;
   font-size: 50px;
   font-weight: 400;

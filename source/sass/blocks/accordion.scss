@@ -14,32 +14,8 @@
   }
 }
 
-.accordion__element {
-  padding: 42px 40px 38px 40px;
-  width: 100%;
-  border: 1px solid $color-cerulean-blue;
+.accordion__element.is-active {
   border-radius: 16px;
-
-  @include vp-1199 {
-    padding: 30px 29px 29px 29px;
-  }
-
-  @include vp-767 {
-    padding: 20px 15px 19px 15px;
-  }
-}
-
-.accordion__element--fourth,
-.accordion__element--fifth  {
-  padding: 32px 40px 33px 40px;
-
-  @include vp-1199 {
-    padding: 25px 29px 24px 29px;
-  }
-
-  @include vp-767 {
-    padding: 20px 15px 20px 15px;
-  }
 }
 
 .accordion__button {
@@ -51,10 +27,48 @@
   color: $color-cerulean-blue;
   border: none;
   background-color: $color-alabaster;
+  padding: 43px 40px 37px 40px;
+  width: 100%;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
 
-  @include vp-1199 {
-    align-items: center;
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+    outline: none;
+
+  & span:nth-child(2n) {
+    background-color: $color-default-white;
+    border: 1px solid $color-cerulean-blue;
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
   }
+}
+
+@include vp-1199 {
+  align-items: center;
+  padding: 30px 29px 29px 29px;
+}
+
+@include vp-767 {
+  padding: 20px 15px 19px 15px;
+}
+
+&:active {
+  background-color: $color-default-white;
+  color: $color-endeavour;
+
+  & span:nth-child(2n) {
+    background-color: $color-endeavour;
+    border: none;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+}
 }
 
 .accordion__button span:nth-child(1n){
@@ -93,6 +107,7 @@
   position: relative;
   margin: 0;
   padding: 0;
+  max-width: 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -101,16 +116,50 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/sprite/plus.svg");
+    mask-image: url("../img/sprite/plus.svg");
     width: 20px;
     height: 20px;
-    background-repeat: no-repeat;
+    background-color: $color-default-white;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
   }
+}
+
+.is-active .accordion__button {
+  padding-bottom: 0;
+  &:hover,
+  &:focus-visible {
+    & span:nth-child(2n) {
+      background-color: $color-cerulean-blue;
+      border: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+    border: none;
+
+    & span:nth-child(2n) {
+      background-color: $color-default-white;
+      border: none;
+
+      &::before {
+        background-color: $color-endeavour;
+      }
+    }
+  }
+}
+
+.accordion__element.is-active:has(.accordion__button:active) {
+  background-color: $color-endeavour ;
 }
 
 .is-active span:nth-child(2n) {
@@ -120,9 +169,10 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/sprite/minus.svg");
+    mask-image: url("../img/sprite/minus.svg");
     width: 20px;
     height: 20px;
+    background-color: $color-cerulean-blue;
     background-repeat: no-repeat;
     top: 0;
     left: 0;
@@ -132,14 +182,6 @@
   }
 }
 
-.accordion__element--fourth span:nth-child(2n),
-.accordion__element--fifth span:nth-child(2n)  {
-  margin-top: 10px;
-
-  @include vp-1199 {
-    margin-top: 0;
-  }
-}
 
 .is-active .accordion__button {
   background-color: $color-cerulean-blue;
@@ -148,15 +190,18 @@
 
 .accordion__content {
   width: 100%;
-  max-width: 637px;
+  max-width: 725px;
+  padding: 0 40px 0 40px;
 
   @include vp-1199 {
     width: 87%;
     max-width: unset;
+    padding: 0 29px 0 29px;
   }
 
   @include vp-767 {
     width: 100%;
+    padding: 0 15px 0 15px;
   }
 }
 
@@ -181,13 +226,52 @@
 .accordion__element.is-active {
   background-color: $color-cerulean-blue;
   color: $color-default-white;
-  padding-bottom: 33px;
+  padding-bottom: 32px;
 
   @include vp-1199 {
-    padding-bottom: 25px;
+    padding-bottom: 31px;
   }
 
   @include vp-767 {
     padding-bottom: 14px;
+  }
+}
+
+.accordion__button--fourth {
+  padding-top: 34px;
+  padding-bottom: 33px;
+
+  @include vp-1199 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.accordion__button--fifth {
+  padding-top: 30px;
+
+  @include vp-1199 {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.accordion__button--fourth span:nth-child(2n),
+.accordion__button--fifth span:nth-child(2n)  {
+  margin-top: 10px;
+
+  @include vp-1199 {
+    margin-top: 0;
   }
 }

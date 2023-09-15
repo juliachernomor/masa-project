@@ -24,23 +24,23 @@
       border-radius: 8px;
       background-color: $color-cerulean-blue;
 
-      border: 2px solid rgba(#ffffff, 0.3);
+      // border: 2px solid rgba(#ffffff, 0.3);
       outline: none;
 
       transition: border 0.3s ease;
 
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
+      // @media screen and (max-width: 767px) {
+      //   max-width: unset;
+      //   width: 100%;
+      // }
 
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
+      // &:hover {
+      //   border: 2px solid rgba(#000000, 0.5);
+      // }
 
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+      // &:focus {
+      //   border: 2px solid rgba(#000000, 0.8);
+      // }
     }
 
 
@@ -70,11 +70,13 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      background-color: $color-wild-watermelon-transparent;
+      border: 1px solid $color-wild-watermelon;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        background-color: $color-wild-watermelon-transparent;
+      border: 1px solid $color-wild-watermelon;
       }
     }
   }

@@ -4,20 +4,50 @@
   background-color: $color-cerulean-blue;
   border-radius: 50%;
   margin: 0;
+
+  &--light {
+    background-color: $color-cerulean-blue;
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+      outline: none;
+    }
+  }
+
+  &--dark {
+    background-color: $color-default-white;
+
+    &:hover,
+    &:focus {
+      background-color: color-cerulean-blue;
+      outline: none;
+    }
+  }
 }
 
 
 .diagonal-row::after {
   position: absolute;
-  content: url("../img/sprite/diagonal-arrow.svg");
+  content: "";
+  mask-image: url("../img/sprite/diagonal-arrow.svg");
+  mask-repeat: no-repeat;
   top: 17px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 
   @include vp-767 {
     top: 11px;
   }
+}
+
+.diagonal-row--light::after {
+  background-color: $color-default-white;
+}
+
+.diagonal-row--dark::after {
+  background-color: $color-cerulean-blue;
 }

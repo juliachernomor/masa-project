@@ -1,7 +1,19 @@
 .hero-slider {
+  position: relative;
   min-height: 800px;
   height: auto;
   background-color: $color-rodeo-dust;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49,109,194,.2);
+    z-index: 1;
+  }
 
   @include vp-1199 {
     min-height: 1024px;
@@ -36,9 +48,11 @@
 }
 
 .hero-slider__wrapper {
+  position: relative;
   padding: 420px 100px 55px 100px;
   max-width: 1440px;
   margin: 0 auto;
+  z-index: 3;
 
   @include vp-1199 {
     padding: 697px 45px 60px 45px;
