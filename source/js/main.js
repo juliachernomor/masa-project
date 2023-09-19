@@ -8,6 +8,7 @@ import {initAccordions} from './vendor/init-accordion';
 import {initmap} from './modules/map';
 import {CustomSelect} from './select/custom-select';
 import {replaceCurrentClass} from './modules/news-filter';
+import {initAutoResizeTextarea} from './vendor/auto-resize-textarea';
 
 
 // ---------------------------------
@@ -34,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initAutoResizeTextarea();
     const select = new CustomSelect();
     select.init();
 

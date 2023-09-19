@@ -48,6 +48,7 @@
 .programs__btn {
   width: 232px;
   padding-left: 30px;
+  background-color: transparent;
 
   @include vp-1199 {
     max-width: unset;

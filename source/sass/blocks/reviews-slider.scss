@@ -129,6 +129,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  color: $color-default-charcoal;
 
   @media (min-width: 1200px) and (max-width: 1440px) {
     font-size: calc(12px + (14 - 12) * ( (100vw - 1200px) / ( 1440 - 1200) ));
@@ -168,6 +169,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+  color: $color-default-charcoal;
 
   @include vp-1199 {
     width: 100%;
