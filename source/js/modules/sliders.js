@@ -1,10 +1,10 @@
-import swiper from '../vendor/swiper';
+const Swiper = window.Swiper;
 
 const elementHero = document.querySelector('.swiper--1');
 const createHeroSlider = () => {
   if (elementHero) {
     /* eslint-disable */
-    new swiper('.swiper--1', {
+    new Swiper('.swiper--1', {
     /* eslint-enable */
       speed: 1500,
       loop: true,
@@ -38,7 +38,7 @@ const elementPrograms = document.querySelector('.swiper--2');
 const createProgramsSlider = () => {
   if (elementPrograms) {
     /* eslint-disable */
-    new swiper('.swiper--2', {
+    new Swiper('.swiper--2', {
       /* eslint-enable */
       speed: 1500,
       loop: false,
@@ -65,7 +65,6 @@ const createProgramsSlider = () => {
       navigation: {
         nextEl: '.programs__button-next',
         prevEl: '.programs__button-prev',
-
       },
     });
   }
@@ -75,7 +74,7 @@ const elementNews = document.querySelector('.news__swiper');
 const createNewsSlider = () => {
   if (elementNews) {
     /* eslint-disable */
-    new swiper('.news__swiper', {
+    new Swiper('.news__swiper', {
       /* eslint-enable */
       speed: 1500,
       loop: false,
@@ -129,7 +128,7 @@ const elementReviews = document.querySelector('.swiper--4');
 const createReviewsSlider = () => {
   if (elementReviews) {
     /* eslint-disable */
-    new swiper('.swiper--4', {
+    new Swiper('.swiper--4', {
       /* eslint-enable */
       speed: 1500,
       loop: false,

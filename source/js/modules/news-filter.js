@@ -1,12 +1,12 @@
-const container = document.querySelector('.news__filtration-list');
+const container = document.querySelector('.news__buttons-wrapper');
 
-let currentButton = container.querySelector('.news__filtration-item--current');
+let currentButton = container.querySelector('.news__button--current');
 
 const replaceCurrentClass = () => {
   container.addEventListener('click', (evt) => {
-    if (evt.target.matches('.news__filtration-item')) {
-      currentButton.classList.remove('news__filtration-item--current');
-      evt.target.classList.add('news__filtration-item--current');
+    if (evt.target.matches('.news__button')) {
+      currentButton.classList.remove('news__button--current');
+      evt.target.classList.add('news__button--current');
       currentButton = evt.target;
     }
   });

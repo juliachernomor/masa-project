@@ -1,4 +1,4 @@
-import L from '../vendor/leaflet';
+const L = window.L;
 
 const iconOptions = {
   iconUrl: 'img/sprite/pin.svg',
