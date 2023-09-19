@@ -7290,12 +7290,11 @@ button,
 
   .news-slider:first-child {
     width: 100%;
-    height: 103.125vw;
+    height: 103.13vw;
   }
 
   .news-slider {
     width: 100%;
-    min-height: 75vw;
   }
 
   .news-slider__content {
