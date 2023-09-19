@@ -85,6 +85,7 @@ const createNewsSlider = () => {
             rows: 2,
             fill: 'row',
           },
+          spaceBetween: 20,
           allowTouchMove: true,
         },
         768: {
