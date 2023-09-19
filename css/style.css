@@ -7295,6 +7295,8 @@ button,
 
   .news-slider {
     width: 100%;
+    height: 71vw;
+    min-height: 240px;
   }
 
   .news-slider__content {
