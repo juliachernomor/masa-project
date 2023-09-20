@@ -4927,16 +4927,6 @@ button,
   transition: color 0.3s ease;
 }
 
-.custom-toggle input:checked + .custom-toggle__icon {
-  border: 1.5px solid #2c39f2;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon::before {
-  -webkit-mask-image: url("../img/sprite/check.svg");
-  mask-image: url("../img/sprite/check.svg");
-  background-color: rgba(49, 109, 194, 0.7);
-}
-
 .custom-toggle.is-invalid label span {
   color: #484848;
 }
@@ -5390,6 +5380,16 @@ button,
 .custom-toggle input:checked + .user-contacts__toggle-icon:focus::before,
 .custom-toggle input:checked + .user-contacts__toggle-icon:focus-visible::before {
   background-color: #ffffff;
+}
+
+input:checked + .user-contacts__toggle-icon {
+  border: 1.5px solid #2c39f2;
+}
+
+input:checked + .user-contacts__toggle-icon::before {
+  -webkit-mask-image: url("../img/sprite/check.svg");
+  mask-image: url("../img/sprite/check.svg");
+  background-color: rgba(49, 109, 194, 0.7);
 }
 
 .footer__container {
@@ -5908,32 +5908,33 @@ button,
   cursor: pointer;
 }
 
-.feedback__checkbox .feedback__toggle-icon:hover {
-  background-color: #316dc2;
-  border: 1px solid transparent;
-}
-
-.feedback__checkbox .feedback__toggle-icon:focus-visible {
-  background-color: #316dc2;
-  border: 1px solid transparent;
-  outline: none;
-}
-
+.feedback__checkbox .feedback__toggle-icon:hover,
+.feedback__checkbox .feedback__toggle-icon:focus-visible,
 .feedback__checkbox .feedback__toggle-icon:active {
-  background-color: #316dc2;
-  border: 1px solid transparent;
+  background-color: transparent;
+  border: 1px solid #316dc2;
   outline: none;
 }
 
-.feedback__toggle-icon:hover > .feedback__toggle-icon::before {
-  background-color: #316dc2;
-  opacity: 1;
-  outline: none;
+.feedback__checkbox .feedback__toggle-icon:disabled {
+  border: 1px solid rgba(169, 175, 183, 0.5);
+  background-color: rgba(169, 175, 183, 0.2);
 }
 
-.feedback__toggle-icon:focus-visible > .feedback__toggle-icon::before {
+input:checked + .feedback__toggle-icon {
   background-color: #316dc2;
-  opacity: 1;
+  border: none;
+}
+
+input:checked + .feedback__toggle-icon::before {
+  -webkit-mask-image: url("../img/sprite/check.svg");
+  mask-image: url("../img/sprite/check.svg");
+  background-color: #ffffff;
+}
+
+input:checked + .feedback__toggle-icon:hover {
+  background-color: rgba(49, 109, 194, 0.7);
+  border: none;
   outline: none;
 }
 
