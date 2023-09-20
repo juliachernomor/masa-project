@@ -2023,35 +2023,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /*stylelint-enable*/
 
-.auto-resize-textarea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 9px;
-  height: auto;
-}
-
-.auto-resize-textarea textarea {
-  font-size: 26px;
-  line-height: 30px;
-  padding: 5px 10px;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #316dc2;
-  outline: none;
-  border-radius: 8px;
-}
-
-.auto-resize-textarea textarea:hover,
-.auto-resize-textarea textarea:focus {
-  border-color: #2c39f2;
-}
-
 @font-face {
   font-family: "Manrope";
   font-style: normal;
@@ -5121,6 +5092,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 9px;
+  height: auto;
 }
 
 .user-contacts__textarea label {
@@ -5134,11 +5112,17 @@ button,
 }
 
 .user-contacts__textarea textarea {
+  width: 100%;
+  outline: none;
   padding: 16px 25px;
   min-height: 98px;
   color: #ffffff;
   font-size: 16px;
   opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  overflow: auto;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
@@ -5439,7 +5423,7 @@ button,
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
-  width: 58.6%;
+  width: 63.6%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -5478,7 +5462,7 @@ button,
   list-style-type: none;
   margin: 0 0 0 auto;
   padding: 0;
-  width: 25%;
+  width: 20%;
 }
 
 .footer__socials-item {
@@ -5935,6 +5919,12 @@ button,
 }
 
 .feedback__toggle-icon:hover > .feedback__toggle-icon::before {
+  background-color: #316dc2;
+  opacity: 1;
+  outline: none;
+}
+
+.feedback__toggle-icon:focus-visible > .feedback__toggle-icon::before {
   background-color: #316dc2;
   opacity: 1;
   outline: none;
@@ -7005,6 +6995,7 @@ button,
   .about-masa__btn span:nth-child(1n) {
     font-size: 12px;
     line-height: 10px;
+    padding-right: 20px;
   }
 
   .about-masa__advantages-list {
