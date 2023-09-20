@@ -137,12 +137,14 @@
 }
 
 .about-masa__btn {
+  min-width: 277px;
   width: 56%;
   padding-left: 30px;
   margin-bottom: 10px;
   background-color: transparent;
 
   @include vp-1199 {
+    min-width: unset;
     width: 54.5%;
   }
 
@@ -158,18 +160,22 @@
 .about-masa__btn span:nth-child(2n) {
   height: 46px;
   width: 46px;
+  max-width: 46px;
 
   @include vp-767 {
     width: 34px;
+    max-width: 34px;
     height: 34px;
   }
 }
 
 .about-masa__btn span:nth-child(1n) {
+  width: 182px;
+  padding-right: 15px;
+
   @include vp-767 {
     font-size: 12px;
     line-height: 10px;
-    padding-right: 20px;
   }
 }
 
