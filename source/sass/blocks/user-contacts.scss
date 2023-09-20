@@ -501,3 +501,13 @@
     }
   }
 }
+
+input:checked + .user-contacts__toggle-icon {
+  border: 1.5px solid #2c39f2;
+
+  &::before {
+    mask-image: url("../img/sprite/check.svg");
+    background-color: rgba(49, 109, 194, 0.7);
+  }
+}
+

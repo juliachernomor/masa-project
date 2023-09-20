@@ -293,34 +293,34 @@
     top: 0;
   }
 
-  &:hover {
-    background-color: $color-cerulean-blue;
-    border: 1px solid transparent;
-  }
-
-  &:focus-visible {
-    background-color: $color-cerulean-blue;
-    border: 1px solid transparent;
-    outline: none;
-  }
-
+  &:hover,
+  &:focus-visible,
   &:active {
-    background-color: $color-cerulean-blue;
-    border: 1px solid transparent;
+    background-color: transparent;
+    border: 1px solid $color-cerulean-blue;
     outline: none;
+  }
+
+  &:disabled {
+    border: 1px solid rgba($color-mischka, 0.5);
+    background-color: rgba($color-mischka, 0.2);
   }
 }
 
-.feedback__toggle-icon:hover > .feedback__toggle-icon::before {
+input:checked + .feedback__toggle-icon {
   background-color: $color-cerulean-blue;
-  opacity: 1;
-  outline: none;
-}
+  border:none;
 
-.feedback__toggle-icon:focus-visible > .feedback__toggle-icon::before {
-  background-color: $color-cerulean-blue;
-  opacity: 1;
-  outline: none;
+  &::before {
+    mask-image: url("../img/sprite/check.svg");
+    background-color: $color-default-white;
+  }
+
+  &:hover {
+    background-color: rgba(49, 109, 194, 0.7);
+    border: none;
+    outline: none;
+  }
 }
 
 .feedback__checkbox-label {
