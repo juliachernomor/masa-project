@@ -2916,6 +2916,7 @@ button,
 }
 
 .about-masa__btn {
+  min-width: 277px;
   width: 56%;
   padding-left: 30px;
   margin-bottom: 10px;
@@ -2925,6 +2926,12 @@ button,
 .about-masa__btn span:nth-child(2n) {
   height: 46px;
   width: 46px;
+  max-width: 46px;
+}
+
+.about-masa__btn span:nth-child(1n) {
+  width: 182px;
+  padding-right: 15px;
 }
 
 .about-masa__advantages-list {
@@ -6121,6 +6128,7 @@ button,
   }
 
   .about-masa__btn {
+    min-width: unset;
     width: 54.5%;
   }
 
@@ -6989,13 +6997,13 @@ button,
 
   .about-masa__btn span:nth-child(2n) {
     width: 34px;
+    max-width: 34px;
     height: 34px;
   }
 
   .about-masa__btn span:nth-child(1n) {
     font-size: 12px;
     line-height: 10px;
-    padding-right: 20px;
   }
 
   .about-masa__advantages-list {
