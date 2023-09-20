@@ -175,6 +175,10 @@
 
 .user-contacts__textarea {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 9px;
+  height: auto;
 
   @include vp-1199 {
     margin: 0;
@@ -190,11 +194,17 @@
 }
 
 .user-contacts__textarea textarea {
+  width: 100%;
+  outline: none;
   padding: 16px 25px;
   min-height: 98px;
   color: $color-default-white;
   font-size: 16px;
   opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid rgba(#ffffff, 0.3);
+  background-color: transparent;
+  overflow: auto;
   order: 2;
 
   &:disabled {
