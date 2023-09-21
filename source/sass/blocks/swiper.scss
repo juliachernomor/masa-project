@@ -1,12 +1,16 @@
-.swiper-button-disabled svg {
+.swiper-button-disabled[tabindex="-1"] svg {
   stroke: $color-mischka;
 }
 
-.swiper-button-disabled {
+.swiper-button-disabled[tabindex="-1"] {
   &:hover,
   &:focus,
   &:active {
     background-color: transparent;
     outline: none;
   }
+}
+
+.swiper-button[tabindex="0"] {
+  cursor: pointer;
 }

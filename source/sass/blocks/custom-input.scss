@@ -50,8 +50,7 @@
   }
 
   &.is-invalid {
-    input,
-    textarea {
+    input {
       background-color: $color-wild-watermelon-transparent;
       border: 1px solid $color-wild-watermelon;
 

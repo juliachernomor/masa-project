@@ -4,6 +4,7 @@
   padding-top: 123px;
   padding-bottom: 123px;
   color: $color-cerulean-blue;
+  overflow: hidden;
 
   @include vp-1199 {
     padding-top: 98px;
@@ -38,27 +39,24 @@
 }
 
 .news__buttons-wrapper {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 2.4%;
-  list-style-type: none;
+  justify-content: start;
+  gap: 30px;
   padding: 0;
   margin: 0 auto 35px auto;
 
   @include vp-1199 {
-    column-gap: 1.5%;
+    gap: 10px;
     margin-bottom: 29px;
   }
 
   @include vp-767 {
     flex-wrap: nowrap;
-    justify-content: unset;
-    column-gap: 4%;
-    overflow-x: auto;
+    gap: 12px;
     margin: 0 auto 12px auto;
-    max-width: 557px;
+    width: 100vw;
+    overflow-x: scroll;
     padding-bottom: 11px;
   }
 }
@@ -179,9 +177,23 @@
   text-align: center;
   line-height: 20px;
   font-size: 16px;
-  color: $color-cerulean-blue;
-  opacity: 1;
+  border-radius: 50%;
+  color: rgba($color-cerulean-blue, 0.5);
   background: transparent;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-cerulean-blue;
+    background-color: transparent;
+    color: $color-cerulean-blue;
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    border: none;
+    color: $color-default-white;
+  }
 
   @include vp-767 {
     width: 26px;
@@ -189,7 +201,9 @@
   }
 }
 
-.news__pagination .swiper-pagination-bullet-active {
+.news__pagination .swiper-pagination-bullet-active,
+.news__pagination .swiper-pagination-bullet-active:hover,
+.news__pagination .swiper-pagination-bullet-active:focus {
   color: $color-default-white;
   background: $color-cerulean-blue;
 }

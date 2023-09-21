@@ -39,6 +39,7 @@
   padding: 43px 40px 37px 40px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
+  cursor: pointer;
 
   &:hover,
   &:focus-visible {
@@ -185,7 +186,7 @@
   background-color: $color-endeavour;
 }
 
-.is-active .accordion__button-icon {
+.is-active .accordion__button span:nth-child(2n) {
   position: relative;
   background-color: $color-default-white;
 

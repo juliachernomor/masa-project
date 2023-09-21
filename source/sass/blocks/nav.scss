@@ -27,8 +27,21 @@
   user-select: none;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.8;
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    border: none;
+    color: $color-default-white;
+    outline: none;
+
+    & span:nth-child(2n) {
+      background-color: $color-default-white;
+      outline: none;
+
+      &:after {
+        background-color: $color-cerulean-blue;
+      }
+    }
   }
 }
 
@@ -49,13 +62,15 @@
 
   &::after {
     position: absolute;
-    content: url("../img/sprite/menu.svg");
+    content: "";
+    mask-image: url("../img/sprite/menu.svg");
+    background-color: $color-default-white;
     top: 12px;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 18px;
-    height: 8px;
+    height: 18px;
   }
 }
 

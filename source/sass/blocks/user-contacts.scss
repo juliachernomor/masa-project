@@ -183,7 +183,21 @@
   @include vp-1199 {
     margin: 0;
   }
+
+  &.is-invalid {
+    textarea {
+      background-color: $color-wild-watermelon-transparent;
+      border: 1px solid $color-wild-watermelon;
+
+      &:focus,
+      &:hover {
+        background-color: $color-wild-watermelon-transparent;
+        border: 1px solid $color-wild-watermelon;
+      }
+    }
+  }
 }
+
 
 .user-contacts__textarea label {
   order: 1;
@@ -284,37 +298,6 @@
   }
 }
 
-.user-contacts__checkbox {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
-  cursor: unset;
-  z-index: 1;
-
-  @include vp-1199 {
-    margin-bottom: 29px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 11px;
-  }
-}
-
-.user-contacts__checkbox label {
-  opacity: 1;
-  padding-left: 30px;
-
-  @include vp-767 {
-    padding-left: 30px;
-  }
-}
-
-.user-contacts__checkbox-label {
-  color: $color-default-white;
-  opacity: 0.9;
-}
-
 .user-contacts__select {
   position: relative;
 }
@@ -351,10 +334,6 @@
     background-color: $color-cerulean-blue;
     outline: none;
   }
-}
-
-.user-contacts__item[aria-selected="true"] {
-  background-color: $color-default-white;
 }
 
 .user-contacts__button-select {
@@ -454,8 +433,57 @@
   }
 }
 
+.user-contacts__checkbox {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  cursor: unset;
+  z-index: 1;
+
+  @include vp-1199 {
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 11px;
+  }
+
+  &.is-invalid {
+    & .user-contacts__toggle-icon {
+      background-color: $color-wild-watermelon-transparent;
+      border: 1px solid $color-wild-watermelon;
+
+      &::before {
+        background-color: transparent;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $color-wild-watermelon-transparent;
+        border: 1px solid $color-wild-watermelon;
+      }
+    }
+  }
+}
+
+.user-contacts__checkbox label {
+  opacity: 1;
+  padding-left: 30px;
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
+}
+
+.user-contacts__checkbox-label {
+  color: $color-default-white;
+  opacity: 0.9;
+}
+
 .user-contacts__toggle-icon {
   border-radius: 2px;
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.7);
   width: 20px;
   height: 20px;
