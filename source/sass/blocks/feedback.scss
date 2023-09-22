@@ -321,10 +321,10 @@
 
 input:checked + .feedback__toggle-icon {
   background-color: $color-cerulean-blue;
-  border:none;
+  border: none;
 
   &::before {
-    top:10px;
+    top: 10px;
     left: 10px;
     mask-image: url("../img/sprite/check.svg");
     background-color: $color-default-white;

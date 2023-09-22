@@ -8,6 +8,7 @@ import {initAccordions} from './vendor/init-accordion';
 import {initmap} from './modules/map';
 import {CustomSelect} from './select/custom-select';
 import {replaceCurrentClass} from './modules/news-filter';
+import {replaceFocus} from './modules/focus';
 
 
 // ---------------------------------
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   effectDropMenu();
   initAccordions();
   initmap();
+  replaceFocus();
 
   // Modules
   // ---------------------------------

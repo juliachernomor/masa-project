@@ -27,7 +27,7 @@
             <use href="./img/sprite.svg#logotype"></use>
           </svg>
         </a>
-        <nav class="nav nav--closed nav--nojs">
+        <nav class="nav nav--closed nav--nojs" id="nav">
           <button class="nav__btn" type="button">
             <span>Меню</span>
             <span></span>
@@ -35,7 +35,7 @@
           </button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#">O проекте</a>
+              <a class="nav__first-item" href="#">O проекте</a>
             </li>
             <li class="nav__item nav__item-dropdown nav__item--button-close">
               <button class="nav__button-dropdown" type="button">
@@ -56,13 +56,13 @@
                 </li>
               </ul>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--margin-1">
               <a href="#">Как поехать</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--margin">
               <a href="#">Отзывы</a>
             </li>
-            <li class="nav__item  nav__item-dropdown nav__item--button-close">
+            <li class="nav__item nav__item--margin nav__item-dropdown nav__item--button-close">
               <button class="nav__button-dropdown" type="button">
                 <span>Новости</span>
               </button>
@@ -81,8 +81,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav__item">
-              <a href="#">Контакты</a>
+            <li class="nav__item nav__item--margin">
+              <a class="nav__last-item" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -93,7 +93,7 @@
         <h1 class="visually-hidden">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</h1>
         <div class="hero__swiper swiper swiper--1">
           <ul class="hero__container swiper-wrapper">
-            <li class="hero__slider hero-slider hero-slider--first swiper-slide">
+            <li class="hero__slider hero-slider hero-slider--first swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="./img/hero-background-mobile-1.webp, ./img/hero-background-mobile-1@2x.webp 2x" width="320"
@@ -134,7 +134,7 @@
                 </div>
               </div>
             </li>
-            <li class="hero__slider hero-slider swiper-slide">
+            <li class="hero__slider hero-slider swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="./img/hero-background-mobile-2.webp, ./img/hero-background-mobile-2@2x.webp 2x" width="320"
@@ -175,7 +175,7 @@
                 </div>
               </div>
             </li>
-            <li class="hero__slider hero-slider swiper-slide">
+            <li class="hero__slider hero-slider swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="./img/hero-background-mobile-3.webp, ./img/hero-background-mobile-3@2x.webp 2x" width="320"
@@ -503,15 +503,15 @@
         <div class="news__container container">
           <h2>Новости и материалы</h2>
           <div class="news__buttons-wrapper">
-            <button class="news__button news__button--current">Общее</button>
-            <button class="news__button">Волонтерство</button>
-            <button class="news__button">Стажировки</button>
-            <button class="news__button">Карьера</button>
-            <button class="news__button">Путешествия</button>
+            <button class="news__button news__button--current" data-filter="all" id="all-news">Общее</button>
+            <button class="news__button" data-filter="volunteering" id="volunteering-news">Волонтерство</button>
+            <button class="news__button" data-filter="internship" id="internship-news">Стажировки</button>
+            <button class="news__button" data-filter="career" id="career-news">Карьера</button>
+            <button class="news__button" data-filter="travel" id="travel-news">Путешествия</button>
           </div>
           <div class="news__swiper ">
             <div class="news__swiper-wrapper swiper-wrapper">
-              <div class="news__slider news-slider swiper-slide news-slider--first">
+              <div class="news__slider news-slider swiper-slide news-slider--first" data-filter="internship">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-1.webp, ./img/news-tablet-1@2x.webp 2x" width="324" height="350">
@@ -533,7 +533,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--second">
+              <div class="news__slider news-slider swiper-slide news-slider--second" data-filter="travel">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-2.webp, ./img/news-tablet-2@2x.webp 2x" width="324" height="350">
@@ -554,7 +554,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--third">
+              <div class="news__slider news-slider swiper-slide news-slider--third" data-filter="volunteering">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-3.webp, ./img/news-tablet-3@2x.webp 2x" width="324" height="350">
@@ -575,7 +575,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--fourth">
+              <div class="news__slider news-slider swiper-slide news-slider--fourth" data-filter="career">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-4.webp, ./img/news-tablet-4@2x.webp 2x" width="324" height="350">
@@ -596,7 +596,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--fifth">
+              <div class="news__slider news-slider swiper-slide news-slider--fifth" data-filter="career">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-4.webp, ./img/news-tablet-4@2x.webp 2x" width="324" height="350">
@@ -617,7 +617,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--sixth">
+              <div class="news__slider news-slider swiper-slide news-slider--sixth" data-filter="volunteering">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-3.webp, ./img/news-tablet-3@2x.webp 2x" width="324" height="350">
@@ -638,7 +638,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--seventh">
+              <div class="news__slider news-slider swiper-slide news-slider--seventh" data-filter="travel">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-2.webp, ./img/news-tablet-2@2x.webp 2x" width="324" height="350">
