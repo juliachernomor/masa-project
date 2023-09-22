@@ -6920,6 +6920,10 @@ input:checked + .feedback__toggle-icon:hover {
     margin-bottom: 20px;
   }
 
+  .nav__item--margin-1 {
+    margin-bottom: 16px;
+  }
+
   .nav__item--margin {
     margin-bottom: 20px;
   }
