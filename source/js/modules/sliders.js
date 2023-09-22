@@ -9,10 +9,10 @@ const createHeroSlider = () => {
       speed: 1500,
       loop: true,
       effect: 'fade',
-      // autoplay: {
-      //   delay: 3500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
       breakpoints: {
         320: {
           allowTouchMove: true,
