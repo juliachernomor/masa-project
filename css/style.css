@@ -7986,7 +7986,7 @@ input:checked + .feedback__toggle-icon:hover {
   }
 
   .feedback__checkbox .feedback__toggle-icon {
-    top: 0;
+    top: 2px;
   }
 
   .feedback__checkbox-label {
