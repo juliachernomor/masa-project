@@ -16,7 +16,7 @@ const replaceFocus = () => {
       navFirstItem.focus();
       recycleFocus(navLastItem, navFirstItem);
     } else {
-      const activeSlider = document.querySelector('.hero__slider.hero-slider.swiper-slide.swiper-slide-visible.swiper-slide-active');
+      const activeSlider = document.querySelector('.hero__slider.swiper-slide-active');
       activeSlider.focus();
     }
   });

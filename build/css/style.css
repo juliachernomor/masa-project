@@ -2331,7 +2331,7 @@ button,
   background-color: #ffffff;
   outline: none;
 }
-.nav__btn:hover span:nth-child(2n):after, .nav__btn:focus span:nth-child(2n):after {
+.nav__btn:hover span:nth-child(2n)::after, .nav__btn:focus span:nth-child(2n)::after {
   background-color: #316dc2;
 }
 
