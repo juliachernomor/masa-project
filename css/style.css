@@ -6093,7 +6093,7 @@ input:checked + .feedback__toggle-icon:hover {
   }
 
   .nav--opened .nav__list {
-    padding: 28px 25px 12px 25px;
+    padding: 28px 25px 10px 25px;
   }
 
   .nav__item {
@@ -6117,7 +6117,7 @@ input:checked + .feedback__toggle-icon:hover {
   }
 
   .nav__item-dropdown--programs {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 
   .hero-slider {
