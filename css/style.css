@@ -7978,6 +7978,7 @@ input:checked + .feedback__toggle-icon:hover {
   .feedback__button-select {
     min-height: 44px;
     height: 44px;
+    margin-bottom: 15px;
   }
 
   .feedback__checkbox {
