@@ -441,6 +441,10 @@
   cursor: unset;
   z-index: 1;
 
+  &:hover .user-contacts__toggle-icon {
+    border: 1px solid $color-default-white;
+  }
+
   @include vp-1199 {
     margin-bottom: 29px;
   }
