@@ -6889,6 +6889,10 @@ input:checked + .feedback__toggle-icon:hover {
     margin-bottom: 20px;
   }
 
+  .feedback__select {
+    margin-bottom: 10px;
+  }
+
   .feedback__button-select {
     margin-bottom: 15px;
   }
