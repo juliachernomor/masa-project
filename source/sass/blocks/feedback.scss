@@ -316,7 +316,7 @@
   cursor: pointer;
 
   @include vp-767 {
-    top: 0;
+    top: 2px;
   }
 
   &:hover,
