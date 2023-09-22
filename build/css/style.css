@@ -2705,16 +2705,16 @@ button,
   max-width: 1440px;
   margin: 0 auto;
   z-index: 3;
-  padding: 420px 100px 55px 100px;
+  padding: 420px 100px 61px 100px;
 }
 @media (max-width: 1199.5px) {
   .hero-slider__wrapper {
-    padding: 697px 45px 60px 45px;
+    padding: 695px 45px 61px 45px;
   }
 }
 @media (max-width: 767.5px) {
   .hero-slider__wrapper {
-    padding: 260px 15px 20px 15px;
+    padding: 259px 15px 18px 15px;
   }
 }
 
@@ -2776,7 +2776,7 @@ button,
 }
 
 .hero-slider__wrapper--third .hero-slider__btn {
-  margin-top: 13px;
+  margin-top: 11px;
 }
 @media (max-width: 1199.5px) {
   .hero-slider__wrapper--third .hero-slider__btn {
@@ -2790,17 +2790,10 @@ button,
 }
 
 .hero-slider__btn span:nth-child(1n) {
-  font-size: 12px;
-  font-style: normal;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   width: 74px;
-}
-@media (max-width: 1199.5px) {
-  .hero-slider__btn span:nth-child(1n) {
-    font-size: 14px;
-    line-height: 14px;
-  }
 }
 @media (max-width: 767.5px) {
   .hero-slider__btn span:nth-child(1n) {
