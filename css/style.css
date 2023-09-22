@@ -6112,6 +6112,10 @@ input:checked + .feedback__toggle-icon:hover {
     letter-spacing: 0;
   }
 
+  .nav__item-dropdown--programs {
+    margin-bottom: 14px;
+  }
+
   .hero-slider {
     min-height: 1024px;
   }
