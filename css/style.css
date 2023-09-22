@@ -2434,8 +2434,8 @@ button,
   outline: none;
 }
 
-.nav__btn:hover span:nth-child(2n):after,
-.nav__btn:focus span:nth-child(2n):after {
+.nav__btn:hover span:nth-child(2n)::after,
+.nav__btn:focus span:nth-child(2n)::after {
   background-color: #316dc2;
 }
 
@@ -2490,7 +2490,9 @@ button,
 }
 
 .nav--opened span:nth-child(2n)::after {
-  content: url("../img/sprite/cross.svg");
+  -webkit-mask-image: url("../img/sprite/cross.svg");
+  mask-image: url("../img/sprite/cross.svg");
+  background-color: #316dc2;
   top: 12px;
   width: 20px;
   height: 20px;
@@ -2542,7 +2544,7 @@ button,
 }
 
 .nav__dropdown--opened .nav__list {
-  max-height: 37vh;
+  max-height: 26.5vh;
   min-height: 100%;
 }
 
@@ -6093,8 +6095,28 @@ input:checked + .feedback__toggle-icon:hover {
     padding-top: 30px;
   }
 
+  .nav--opened .nav__list {
+    padding: 28px 25px 12px 25px;
+  }
+
   .nav__dropdown--opened .nav__list {
-    max-height: 50vh;
+    max-height: 39.7vh;
+  }
+
+  .nav__item {
+    margin-bottom: 20px;
+  }
+
+  .nav__item--margin-1 {
+    margin-bottom: 16px;
+  }
+
+  .nav__item--margin-2 {
+    margin-bottom: 18px;
+  }
+
+  .nav__dropdown-item a {
+    letter-spacing: 0;
   }
 
   .hero-slider {
@@ -6893,8 +6915,12 @@ input:checked + .feedback__toggle-icon:hover {
     min-width: 290px;
     width: 90%;
     max-width: 100%;
-    padding: 30px 25px 13px 25px;
+    padding: 28.5px 25px 13px 24px;
     margin: 0 auto;
+  }
+
+  .nav__dropdown--opened .nav__list {
+    max-height: 53vh;
   }
 
   .hero-slider {
