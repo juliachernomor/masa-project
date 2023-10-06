@@ -20,7 +20,7 @@
 <body>
   <div class="wrapper">
     <header id="header" class="header">
-      <div class="header__container container">
+      <div class="header__container container" id="content">
         <a class="header__logotype" tabindex="-1" href="index.html"><span class="visually-hidden">Логотип
             образовательного проекта. Перейти на главную страницу.</span>
           <svg width="52" height="52" viewBox="0 0 52 52" tabindex="0">
@@ -241,6 +241,7 @@
             </div>
           </div>
           <ul class="about-masa__advantages-list">
+            <video src = "./img/video/video-book.mp4" type="video/mp4" autoplay muted loop></video>
             <li class="about-masa__advantages-item about-masa__advantages-item--first">
               <div class="about-masa__advantages-icon">
                 <svg width="52" height="52" viewBox="0 0 52 52">
@@ -503,15 +504,15 @@
         <div class="news__container container">
           <h2>Новости и материалы</h2>
           <div class="news__buttons-wrapper">
-            <button class="news__button news__button--current" data-filter="all" id="all-news">Общее</button>
-            <button class="news__button" data-filter="volunteering" id="volunteering-news">Волонтерство</button>
-            <button class="news__button" data-filter="internship" id="internship-news">Стажировки</button>
-            <button class="news__button" data-filter="career" id="career-news">Карьера</button>
-            <button class="news__button" data-filter="travel" id="travel-news">Путешествия</button>
+            <button class="news__button news__button--current"  id="all">Общее</button>
+            <button class="news__button" id="volunteering">Волонтерство</button>
+            <button class="news__button" id="internship">Стажировки</button>
+            <button class="news__button" id="career">Карьера</button>
+            <button class="news__button" id="travel">Путешествия</button>
           </div>
           <div class="news__swiper ">
             <div class="news__swiper-wrapper swiper-wrapper">
-              <div class="news__slider news-slider swiper-slide news-slider--first" data-filter="internship">
+              <div class="news__slider news-slider swiper-slide news-slider--first news-slider--big internship all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-1.webp, ./img/news-tablet-1@2x.webp 2x" width="324" height="350">
@@ -533,7 +534,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--second" data-filter="travel">
+              <div class="news__slider news-slider swiper-slide news-slider--second travel all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-2.webp, ./img/news-tablet-2@2x.webp 2x" width="324" height="350">
@@ -554,7 +555,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--third" data-filter="volunteering">
+              <div class="news__slider news-slider swiper-slide news-slider--third volunteering all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-3.webp, ./img/news-tablet-3@2x.webp 2x" width="324" height="350">
@@ -575,7 +576,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--fourth" data-filter="career">
+              <div class="news__slider news-slider swiper-slide news-slider--fourth career all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-4.webp, ./img/news-tablet-4@2x.webp 2x" width="324" height="350">
@@ -596,7 +597,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--fifth" data-filter="career">
+              <div class="news__slider news-slider swiper-slide news-slider--fifth career all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-4.webp, ./img/news-tablet-4@2x.webp 2x" width="324" height="350">
@@ -617,7 +618,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--sixth" data-filter="volunteering">
+              <div class="news__slider news-slider swiper-slide news-slider--sixth volunteering all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-3.webp, ./img/news-tablet-3@2x.webp 2x" width="324" height="350">
@@ -638,7 +639,7 @@
                   </p>
                 </div>
               </div>
-              <div class="news__slider news-slider swiper-slide news-slider--seventh" data-filter="travel">
+              <div class="news__slider news-slider swiper-slide news-slider--seventh travel all">
                 <picture>
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/news-tablet-2.webp, ./img/news-tablet-2@2x.webp 2x" width="324" height="350">
@@ -654,6 +655,49 @@
                   <h3 class="news-slider__content-h3">Путешествуем<br> по Израилю</h3>
                   <p>
                     <span>Какие места посещают наши студенты весной</span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на
+                        страницу с информацией о волонтерстве.</span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="news__slider news-slider swiper-slide news-slider--eight travel all">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/news-tablet-2.webp, ./img/news-tablet-2@2x.webp 2x" width="324" height="350">
+                  <source type="image/png" media="(max-width: 1199px)"
+                    srcset="./img/news-tablet-2.png, ./img/news-tablet-2@2x.png 2x" width="324" height="350">
+                  <source type="image/webp" srcset="./img/news-desktop-2.webp, img/news-desktop-2@2x.webp 2x"
+                    width="286" height="400">
+                  <img src="./img/news-desktop-2.png" srcset="img/news-desktop-2@2x.png 2x" width="286" height="400"
+                    loading="lazy" alt="Декоративное изображение слайда.">
+                </picture>
+                <div class="news-slider__content">
+                  <time datetime="2023-03-20">20/03/2023</time>
+                  <h3 class="news-slider__content-h3">Путешествуем<br> по Израилю</h3>
+                  <p>
+                    <span>Какие места посещают наши студенты весной</span>
+                    <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на
+                        страницу с информацией о волонтерстве.</span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="news__slider news-slider swiper-slide news-slider--nine internship all">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/news-tablet-1.webp, ./img/news-tablet-1@2x.webp 2x" width="324" height="350">
+                  <source type="image/png" media="(max-width: 1199px)"
+                    srcset="./img/news-tablet-1.png, ./img/news-tablet-1@2x.png 2x" width="324" height="350">
+                  <source type="image/webp" srcset="./img/news-desktop-1.webp, img/news-desktop-1@2x.webp 2x"
+                    width="604" height="400">
+                  <img src="./img/news-desktop-1.png" srcset="img/news-desktop-1@2x.png 2x" width="604" height="400"
+                    loading="lazy" alt="Декоративное изображение слайда.">
+                </picture>
+                <div class="news-slider__content news-slider__content">
+                  <time datetime="2023-03-23">23/03/2023</time>
+                  <h3>Интервью с участницей программы стажировки</h3>
+                  <p>
+                    <span>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как&nbsp;прошла 6-месячная стажировка
+                      в&nbsp;ISOFound</span>
                     <a class="diagonal-row diagonal-row--light" href="#"><span class="visually-hidden">Переход на
                         страницу с информацией о волонтерстве.</span></a>
                   </p>
@@ -967,8 +1011,8 @@
                       aria-label="Введите ваш телефон.">
                     <label for="mobile-number-second-from">Телефон</label>
                   </div>
-                  <div class="user-contacts__textarea" data-validate-type="text" data-required>
-                    <textarea name="example" rows="2" required id="message"></textarea>
+                  <div class="auto-resize-textarea user-contacts__textarea" data-validate-type="text" data-required>
+                    <textarea name="example" rows="2" aria-label="textarea" id="message"></textarea>
                     <label for="message">Ваше сообщение</label>
                   </div>
                   <div class="custom-select user-contacts__select" data-select data-validate-type="select"
@@ -1081,6 +1125,13 @@
           <p>Masa © 2023 Все права защищены</p>
           <a href="#">Политика конфиденциальности</a>
         </div>
+        <div class="footer__up-button is-active">
+          <a class="footer__up-button-link" href="#content" aria-label="Прокрутить страницу наверх" data-trigger="">
+          <svg width="35" height="31" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#up"></use>
+          </svg>
+        </a>
+      </div>
       </div>
     </footer>
     <!-- Модалки -->

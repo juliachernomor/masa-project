@@ -9,6 +9,7 @@ import {initmap} from './modules/map';
 import {CustomSelect} from './select/custom-select';
 import {replaceCurrentClass} from './modules/news-filter';
 import {replaceFocus} from './modules/focus';
+import {initAutoResizeTextarea} from './vendor/auto-resize-textarea';
 
 
 // ---------------------------------
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initAutoResizeTextarea();
     initModals();
     const select = new CustomSelect();
     select.init();

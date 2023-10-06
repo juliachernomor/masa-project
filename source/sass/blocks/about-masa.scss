@@ -180,6 +180,7 @@
 }
 
 .about-masa__advantages-list {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 54px 39px;
@@ -205,12 +206,37 @@
   }
 }
 
+.about-masa__advantages-list::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: rgba(49, 109, 194, 0.2);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.about-masa__advantages-list video {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: 0;
+  object-fit: cover;
+}
+
 .about-masa__advantages-item {
   position: relative;
   padding: 28px 5px 30px 5px;
   max-width: 481px;
   border: 1px solid $color-default-white;
   border-radius: 16px;
+  z-index: 3;
 
   @include vp-1199 {
     max-width: 359px;
@@ -254,11 +280,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -23px;
+  top: -29px;
   left: -21px;
   width: 42px;
   height: 42px;
-  background-color: $color-cerulean-blue;
+  background-color: transparent;
 }
 
 .about-masa__advantages-icon svg {

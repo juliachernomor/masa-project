@@ -69,13 +69,11 @@ const createProgramsSlider = () => {
   }
 };
 
-// const buttons = document.querySelector('.news__buttons');
-// const slideItems = document.querySelectorAll('.news__slider');
 const elementNews = document.querySelector('.news__swiper');
 const createNewsSlider = () => {
   if (elementNews) {
     /* eslint-disable */
-    new Swiper(".news__swiper", {
+  let newSwiper = new Swiper('.news__swiper', {
       /* eslint-enable */
       speed: 1500,
       loop: false,
@@ -120,69 +118,47 @@ const createNewsSlider = () => {
         nextEl: '.news__button-next',
         prevEl: '.news__button-prev',
       },
-      // on: {
-      //   init: function (evt) {
-      //     if (evt.target.closest('.news__button')) {
-      //       let activeButton = evt.target.closest('.news__button');
+      on: {
+        /* eslint-disable */
+        init: function () {
+          /* eslint-enable */
+          const newsBtns = document.querySelectorAll('.news__button');
+          const newsItems = document.querySelectorAll('.news__slider');
+          let activeBtn = 'all';
+          showNewsMenu(activeBtn);
 
-      //       if (activeButton.classList.contains('news__button--current')) {
-      //         return;
-      //       } else {
-      //         buttons.forEach((button) =>
-      //           button.classList.remove('news__button--current'));
-      //         activeButton.classList.add('news__button--current');
-      //       }
+          function showNewsMenu(newNewsBtn) {
+            activeBtn = newNewsBtn;
+            let slides = [];
+            newsItems.forEach((newsItem) => {
+              newsItem.classList.remove('news__slide--big');
+              if (newsItem.classList.contains(activeBtn)) {
+                slides.push(newsItem);
+                slides[0].classList.add('news-slider--big');
+                newsItem.style.display = 'block';
 
-      //       let filterClass = activeButton.dataset['filter'];
+              } else {
+                newsItem.style.display = 'none';
+              }
+            });
+          }
 
-      //       if (filterClass === 'all') {
-      //         let slides = [];
+          newsBtns.forEach((newsBtn) => {
+            newsBtn.addEventListener('click', () => {
+              resetActiveNewsBtn();
+              showNewsMenu(newsBtn.id);
+              newsBtn.classList.add('news__button--current');
+              newSwiper.update();
+            });
+          });
 
-      //         slideItems.forEach((slideItem) => {
-      //           slides.push(slideItem);
-      //           slideItem.style.opacity = '0';
-      //           slideItem.classList.remove('news__slide--big');
-      //           slideItem.style.display = 'flex';
-
-      //           setTimeout(() => {
-      //             slideItem.style.opacity = '1';
-      //           }, 300);
-      //         });
-
-      //         slides[0].classList.add('news__slide--big');
-      //       } else {
-      //         let slides = [];
-
-      //         slideItems.forEach((slideItem) => {
-      //           slideItem.style.opacity = '0';
-
-      //           setTimeout(() => {
-      //             slideItem.style.display = 'none';
-      //             slideItem.classList.remove('news__slide--big');
-      //           }, 300);
-
-      //           if (slideItem.dataset['filter'] === filterClass) {
-      //             slides.push(slideItem);
-      //             setTimeout(() => {
-      //               slideItem.style.display = 'flex';
-      //             }, 300);
-      //             setTimeout(() => {
-      //               slideItem.style.opacity = '1';
-      //             }, 400);
-      //           }
-      //         });
-
-      //         setTimeout(() => {
-      //           slides[0].classList.add('news__slide--big');
-      //         }, 400);
-      //       }
-
-      //       setTimeout(() => {
-      //         swiperNews.update();
-      //       }, 500);
-      //     }
-      //   },
-      // },
+          function resetActiveNewsBtn() {
+            newsBtns.forEach((newsBtn) => {
+              newsBtn.classList.remove('news__button--current');
+            });
+          }
+        },
+      },
     });
   }
 };
